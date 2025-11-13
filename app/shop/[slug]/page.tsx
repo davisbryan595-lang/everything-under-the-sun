@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, use } from "react"
 import { useStore } from "@/lib/store"
 import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
@@ -216,8 +216,8 @@ const productDetails: Record<string, any> = {
   },
 }
 
-export default function ProductPage({ params }: { params: { slug: string } }) {
-  const { slug } = params
+export default function ProductPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = use(params)
   const product = productDetails[slug] || productDetails["black-casual-dress"]
 
   const [selectedSize, setSelectedSize] = useState("")
