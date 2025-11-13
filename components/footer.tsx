@@ -62,8 +62,8 @@ export function Footer() {
 
           {/* Customer Service */}
           <div>
-            <h3 className="font-serif text-xl mb-4 text-gold">Customer Service</h3>
-            <ul className="space-y-2 text-sm text-gray-700">
+            <h3 className="font-serif text-lg md:text-xl mb-4 text-gold">Customer Service</h3>
+            <ul className="space-y-2 text-xs md:text-sm text-gray-700">
               <li>
                 <Link href="/shipping" className="hover:text-gold transition-colors">
                   Shipping
