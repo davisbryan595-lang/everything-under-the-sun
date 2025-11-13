@@ -2,6 +2,7 @@ import type React from "react"
 import type { Metadata } from "next"
 import { Playfair_Display, Poppins } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
+import { Preloader } from "@/components/preloader"
 import "./globals.css"
 
 const playfairDisplay = Playfair_Display({
@@ -74,6 +75,7 @@ export default function RootLayout({
         />
       </head>
       <body className={`${poppins.variable} ${playfairDisplay.variable} font-sans antialiased bg-cream text-black`}>
+        <Preloader />
         {children}
         <Analytics />
       </body>
