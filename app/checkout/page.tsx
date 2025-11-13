@@ -31,7 +31,7 @@ export default function CheckoutPage() {
     return (
       <>
         <Navbar />
-        <div className="bg-cream min-h-screen py-20">
+        <div className="bg-light-yellow min-h-screen py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h1 className="font-serif text-4xl text-black mb-4">Checkout</h1>
             <p className="text-gray-600 mb-8">Your cart is empty</p>
@@ -57,7 +57,7 @@ export default function CheckoutPage() {
     <>
       <Navbar />
 
-      <div className="bg-cream min-h-screen py-12">
+      <div className="bg-light-yellow min-h-screen py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="font-serif text-4xl text-black mb-12">Checkout</h1>
 
@@ -66,7 +66,7 @@ export default function CheckoutPage() {
             <div className="lg:col-span-2">
               <form onSubmit={handleSubmit} className="space-y-8">
                 {/* Shipping Information */}
-                <div className="bg-white border border-gold/10 p-6">
+                <div className="bg-white border-2 border-gold p-6">
                   <h2 className="font-serif text-2xl text-black mb-6">Shipping Address</h2>
 
                   <div className="grid grid-cols-2 gap-4 mb-4">
@@ -76,7 +76,7 @@ export default function CheckoutPage() {
                       required
                       value={formData.firstName}
                       onChange={(e) => setFormData({ ...formData, firstName: e.target.value })}
-                      className="px-4 py-2 border border-gold/20 bg-white text-black placeholder-gray-500 focus:border-gold outline-none"
+                      className="px-4 py-2 border-2 border-gold bg-white text-black placeholder-gray-500 focus:border-gold outline-none"
                     />
                     <input
                       type="text"
@@ -84,7 +84,7 @@ export default function CheckoutPage() {
                       required
                       value={formData.lastName}
                       onChange={(e) => setFormData({ ...formData, lastName: e.target.value })}
-                      className="px-4 py-2 border border-gold/20 bg-white text-black placeholder-gray-500 focus:border-gold outline-none"
+                      className="px-4 py-2 border-2 border-gold bg-white text-black placeholder-gray-500 focus:border-gold outline-none"
                     />
                   </div>
 
@@ -113,7 +113,7 @@ export default function CheckoutPage() {
                       required
                       value={formData.city}
                       onChange={(e) => setFormData({ ...formData, city: e.target.value })}
-                      className="px-4 py-2 border border-gold/20 bg-white text-black placeholder-gray-500 focus:border-gold outline-none"
+                      className="px-4 py-2 border-2 border-gold bg-white text-black placeholder-gray-500 focus:border-gold outline-none"
                     />
                     <input
                       type="text"
@@ -121,7 +121,7 @@ export default function CheckoutPage() {
                       required
                       value={formData.state}
                       onChange={(e) => setFormData({ ...formData, state: e.target.value })}
-                      className="px-4 py-2 border border-gold/20 bg-white text-black placeholder-gray-500 focus:border-gold outline-none"
+                      className="px-4 py-2 border-2 border-gold bg-white text-black placeholder-gray-500 focus:border-gold outline-none"
                     />
                   </div>
 
@@ -132,7 +132,7 @@ export default function CheckoutPage() {
                       required
                       value={formData.zip}
                       onChange={(e) => setFormData({ ...formData, zip: e.target.value })}
-                      className="px-4 py-2 border border-gold/20 bg-white text-black placeholder-gray-500 focus:border-gold outline-none"
+                      className="px-4 py-2 border-2 border-gold bg-white text-black placeholder-gray-500 focus:border-gold outline-none"
                     />
                     <input
                       type="tel"
@@ -140,13 +140,13 @@ export default function CheckoutPage() {
                       required
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                      className="px-4 py-2 border border-gold/20 bg-white text-black placeholder-gray-500 focus:border-gold outline-none"
+                      className="px-4 py-2 border-2 border-gold bg-white text-black placeholder-gray-500 focus:border-gold outline-none"
                     />
                   </div>
                 </div>
 
                 {/* Order Items */}
-                <div className="bg-white border border-gold/10 p-6">
+                <div className="bg-white border-2 border-gold p-6">
                   <h2 className="font-serif text-2xl text-black mb-4">Order Items</h2>
                   <div className="space-y-3">
                     {cart.map((item) => (
@@ -171,7 +171,7 @@ export default function CheckoutPage() {
 
             {/* Order Summary */}
             <div className="lg:col-span-1">
-              <div className="bg-white border border-gold/10 p-6 sticky top-24 space-y-6">
+              <div className="bg-white border-2 border-gold p-6 sticky top-24 space-y-6">
                 <h2 className="font-serif text-2xl text-black">Order Summary</h2>
 
                 <div className="space-y-3 pb-6 border-b border-gold/10">
@@ -205,13 +205,13 @@ export default function CheckoutPage() {
 
                   <Link
                     href="/cart"
-                    className="w-full border border-gold/20 text-black py-3 font-semibold hover:border-gold transition-colors block text-center mt-3"
+                    className="w-full border-2 border-gold text-black py-3 font-semibold hover:bg-gold hover:text-black transition-colors block text-center mt-3"
                   >
                     Return to Cart
                   </Link>
                 </div>
 
-                <div className="bg-cream p-4 text-sm text-gray-600">
+                <div className="bg-light-yellow p-4 text-sm text-gray-600">
                   <p className="mb-2 font-semibold text-black">Test Card Details:</p>
                   <p>Card: 4242 4242 4242 4242</p>
                   <p>Any future expiry date</p>
