@@ -5,10 +5,21 @@ import { useEffect, useState } from "react"
 export function Preloader() {
   const [isLoading, setIsLoading] = useState(true)
   const [progress, setProgress] = useState(0)
+  const [hasShown, setHasShown] = useState(false)
 
   useEffect(() => {
+    // Check if preloader has already been shown in this session
+    const preloaderShown = sessionStorage.getItem('preloaderShown')
+    if (preloaderShown) {
+      setIsLoading(false)
+      setProgress(100)
+      setHasShown(true)
+      return
+    }
+
     const timer = setTimeout(() => {
       setIsLoading(false)
+      sessionStorage.setItem('preloaderShown', 'true')
     }, 2000)
 
     const progressInterval = setInterval(() => {
