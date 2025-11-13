@@ -89,32 +89,32 @@ export function Footer() {
 
           {/* Newsletter & Social */}
           <div>
-            <h3 className="font-serif text-xl mb-4 text-gold">Stay Connected</h3>
+            <h3 className="font-serif text-lg md:text-xl mb-4 text-gold">Stay Connected</h3>
             <form className="mb-4">
               <input
                 type="email"
                 placeholder="Your email"
-                className="w-full px-3 py-2 bg-white border border-gold/30 text-black placeholder-gray-400 text-sm mb-2 focus:border-gold outline-none transition-colors"
+                className="w-full px-3 py-2 bg-white border border-gold/30 text-black placeholder-gray-400 text-xs md:text-sm mb-2 focus:border-gold outline-none transition-colors"
               />
               <button
                 type="submit"
-                className="w-full bg-gold text-black font-medium py-2 hover:bg-gold-dark transition-colors text-sm"
+                className="w-full bg-gold text-black font-medium py-2 hover:bg-gold-dark transition-colors text-xs md:text-sm"
               >
                 Subscribe
               </button>
             </form>
             <div className="flex gap-4">
               <a href="#" className="text-gold hover:text-gold-dark transition-colors">
-                <Instagram className="w-5 h-5" />
+                <Instagram className="w-4 md:w-5 h-4 md:h-5" />
               </a>
               <a href="#" className="text-gold hover:text-gold-dark transition-colors">
-                <Facebook className="w-5 h-5" />
+                <Facebook className="w-4 md:w-5 h-4 md:h-5" />
               </a>
             </div>
           </div>
         </div>
 
-        <div className="border-t border-gold/20 mt-8 pt-8 text-center text-sm text-gray-600">
+        <div className="border-t border-gold/20 mt-8 pt-8 text-center text-xs md:text-sm text-gray-600">
           <p>&copy; 2025 Everything Under the Sun Boutique. All rights reserved.</p>
         </div>
       </div>
