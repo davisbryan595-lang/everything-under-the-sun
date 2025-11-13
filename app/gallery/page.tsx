@@ -3,11 +3,20 @@ import { Footer } from "@/components/footer"
 import Image from "next/image"
 
 export default function GalleryPage() {
-  const galleryImages = Array.from({ length: 12 }, (_, i) => ({
-    id: i + 1,
-    alt: `Gallery image ${i + 1}`,
-    query: "casual everyday outfit styling",
-  }))
+  const galleryImages = [
+    { id: 1, src: "/products/p1.jpg", alt: "Classic Black Dress styling" },
+    { id: 2, src: "/products/p2.jpg", alt: "White Linen Top outfit" },
+    { id: 3, src: "/products/p3.jpg", alt: "Crossbody Shoulder Bag styling" },
+    { id: 4, src: "/products/p4.jpg", alt: "Designer handbag collection" },
+    { id: 5, src: "https://images.pexels.com/photos/27035625/pexels-photo-27035625.jpeg", alt: "Black Leather Tote styling" },
+    { id: 6, src: "/products/p6.jpg", alt: "Fashion accessories display" },
+    { id: 7, src: "https://images.pexels.com/photos/1464625/pexels-photo-1464625.jpeg", alt: "White Canvas Sneakers outfit" },
+    { id: 8, src: "https://images.pexels.com/photos/6030460/pexels-photo-6030460.jpeg", alt: "Ceramic Coffee Mug lifestyle" },
+    { id: 9, src: "/products/Hitube_6au0Wfzkah_2025_11_14_00_14_12.jpg", alt: "Fashion styling inspiration 1" },
+    { id: 10, src: "/products/Hitube_9JGmjDuhhg_2025_11_14_00_16_18.jpg", alt: "Fashion styling inspiration 2" },
+    { id: 11, src: "/products/Hitube_XYVGHmvq1N_2025_11_14_00_08_07.jpg", alt: "Fashion styling inspiration 3" },
+    { id: 12, src: "/products/Hitube_cB6QRKbVua_2025_11_14_00_15_22.jpg", alt: "Fashion styling inspiration 4" },
+  ]
 
   return (
     <>
@@ -31,7 +40,7 @@ export default function GalleryPage() {
               >
                 <div className={`relative ${idx % 3 === 1 ? "h-96 md:h-[500px]" : "h-64"}`}>
                   <Image
-                    src={`/generic-placeholder-icon.png?height=${idx % 3 === 1 ? 500 : 300}&width=400&query=${image.query}`}
+                    src={image.src}
                     alt={image.alt}
                     fill
                     className="object-cover group-hover:scale-110 transition-transform duration-300"
