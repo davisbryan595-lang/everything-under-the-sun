@@ -55,7 +55,7 @@ export function HeroCarousel() {
             className="object-cover"
             priority={index === 0}
           />
-          <div className="absolute inset-0 bg-black/10" />
+          <div className="absolute inset-0 bg-gold/20" />
           <div className="absolute inset-0 flex flex-col items-center justify-center text-white text-center px-4">
             <h1 className="font-serif text-4xl md:text-6xl mb-4 fade-in">{slide.title}</h1>
             <p className="text-lg md:text-xl mb-8 max-w-2xl fade-in">{slide.subtitle}</p>
@@ -72,13 +72,13 @@ export function HeroCarousel() {
       {/* Navigation Buttons */}
       <button
         onClick={prev}
-        className="absolute left-4 top-1/2 -translate-y-1/2 z-10 bg-black/50 hover:bg-black text-white p-2 transition-colors border border-black"
+        className="absolute left-4 top-1/2 -translate-y-1/2 z-10 bg-gold/70 hover:bg-gold text-black p-2 transition-colors border border-gold"
       >
         <ChevronLeft className="w-6 h-6" />
       </button>
       <button
         onClick={next}
-        className="absolute right-4 top-1/2 -translate-y-1/2 z-10 bg-black/50 hover:bg-black text-white p-2 transition-colors border border-black"
+        className="absolute right-4 top-1/2 -translate-y-1/2 z-10 bg-gold/70 hover:bg-gold text-black p-2 transition-colors border border-gold"
       >
         <ChevronRight className="w-6 h-6" />
       </button>
@@ -89,7 +89,7 @@ export function HeroCarousel() {
           <button
             key={index}
             onClick={() => setCurrent(index)}
-            className={`w-2 h-2 rounded-full transition-all border border-white ${index === current ? "bg-white w-8" : "bg-white/50"}`}
+            className={`w-2 h-2 rounded-full transition-all border border-gold ${index === current ? "bg-gold w-8" : "bg-gold/30"}`}
           />
         ))}
       </div>
