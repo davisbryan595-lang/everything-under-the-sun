@@ -30,13 +30,13 @@ export function AnimatedCounters() {
   }, [])
 
   return (
-    <div id="counters" className="bg-black text-white py-16 md:py-20">
+    <div id="counters" className="bg-cream text-black py-16 md:py-20 border-y border-gold/20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {counters.map((counter, index) => (
             <div key={index} className="text-center slide-up">
               <div className="text-5xl md:text-6xl font-serif text-gold mb-2">{counter.value}</div>
-              <div className="text-lg text-gray-400">{counter.label}</div>
+              <div className="text-lg text-gray-700">{counter.label}</div>
             </div>
           ))}
         </div>

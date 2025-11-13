@@ -55,8 +55,8 @@ export function HeroCarousel() {
             className="object-cover"
             priority={index === 0}
           />
-          <div className="absolute inset-0 bg-black/30" />
-          <div className="absolute inset-0 flex flex-col items-center justify-center text-white text-center px-4">
+          <div className="absolute inset-0 bg-white/10" />
+          <div className="absolute inset-0 flex flex-col items-center justify-center text-black text-center px-4">
             <h1 className="font-serif text-4xl md:text-6xl mb-4 fade-in">{slide.title}</h1>
             <p className="text-lg md:text-xl mb-8 max-w-2xl fade-in">{slide.subtitle}</p>
             <Link

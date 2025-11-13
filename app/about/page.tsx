@@ -9,7 +9,7 @@ export default function AboutPage() {
 
       <div className="bg-cream min-h-screen">
         {/* Hero Section */}
-        <div className="bg-black text-white py-20">
+        <div className="bg-gold/10 text-black py-20 border-b border-gold/20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h1 className="font-serif text-5xl mb-4">Our Story</h1>
             <p className="text-xl text-gold">Everything Under the Sun Boutique</p>
