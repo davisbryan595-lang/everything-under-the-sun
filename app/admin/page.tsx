@@ -162,7 +162,7 @@ export default function AdminPage() {
               <h2 className="font-serif text-2xl text-black">Product Management</h2>
               <button
                 onClick={() => setShowProductForm(!showProductForm)}
-                className="flex items-center gap-2 bg-gold text-white px-4 py-2 font-semibold hover:text-white transition-colors"
+                className="flex items-center gap-2 bg-gold text-white px-4 py-2 font-semibold hover:text-white transition-colors btn-lift"
               >
                 <Plus className="w-5 h-5" />
                 Add Product
@@ -202,14 +202,14 @@ export default function AdminPage() {
                 <div className="flex gap-2">
                   <button
                     type="submit"
-                    className="bg-gold text-white px-6 py-2 font-semibold hover:text-white transition-colors"
+                    className="bg-gold text-white px-6 py-2 font-semibold hover:text-white transition-colors btn-lift"
                   >
                     Add Product
                   </button>
                   <button
                     type="button"
                     onClick={() => setShowProductForm(false)}
-                    className="border-2 border-gold text-white bg-black px-6 py-2 font-semibold hover:text-white transition-colors"
+                    className="border-2 border-gold text-white bg-black px-6 py-2 font-semibold hover:text-white transition-colors btn-lift"
                   >
                     Cancel
                   </button>
