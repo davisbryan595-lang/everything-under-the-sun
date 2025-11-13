@@ -44,9 +44,10 @@ export function Navbar() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-sm font-medium text-black hover:text-gold hover:font-semibold transition-colors"
+                className="text-sm font-medium text-black hover:text-gold relative pb-1 transition-colors group"
               >
                 {link.label}
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gold transition-all duration-300 group-hover:w-full"></span>
               </Link>
             ))}
           </div>
@@ -74,10 +75,11 @@ export function Navbar() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="block px-4 py-2 text-sm font-medium text-black hover:text-gold hover:font-semibold transition-colors"
+                className="block px-4 py-2 text-sm font-medium text-black hover:text-gold relative transition-colors group"
                 onClick={() => setMenuOpen(false)}
               >
                 {link.label}
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gold transition-all duration-300 group-hover:w-full"></span>
               </Link>
             ))}
           </div>

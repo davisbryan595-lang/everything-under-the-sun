@@ -8,7 +8,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react"
 const slides = [
   {
     id: 1,
-    image: "https://images.pexels.com/photos/3945683/pexels-photo-3945683.jpeg",
+    image: "https://images.pexels.com/photos/7159432/pexels-photo-7159432.jpeg",
     title: "Everything You Need",
     subtitle: "Clothing, purses, accessories, and more - all in one place",
   },
