@@ -106,7 +106,7 @@ export default function Home() {
           <div className="text-center">
             <Link
               href="/shop"
-              className="inline-block bg-black text-gold px-8 py-3 font-semibold hover:bg-gold hover:text-black transition-colors"
+              className="inline-block bg-black text-white px-8 py-3 font-semibold hover:bg-gold hover:text-black transition-colors"
             >
               View All Products
             </Link>
