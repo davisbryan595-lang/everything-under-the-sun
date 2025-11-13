@@ -8,9 +8,9 @@ interface Counter {
 }
 
 const counters: Counter[] = [
-  { label: "Items", value: "1000+" },
-  { label: "Free Shipping", value: "Over $100" },
-  { label: "Hazel Crest's #1", value: "Boutique" },
+  { label: "Products", value: "500+" },
+  { label: "Free Shipping", value: "Over $50" },
+  { label: "Happy", value: "Customers" },
 ]
 
 export function AnimatedCounters() {
