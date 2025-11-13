@@ -74,7 +74,7 @@ export function ProductDetailPanel({ product, onClose }: ProductDetailPanelProps
         {/* Content */}
         <div className="p-4 md:p-6 space-y-6">
           {/* Image */}
-          <div className="relative h-80 rounded-lg overflow-hidden bg-gray-100">
+          <div className="relative h-64 md:h-80 rounded-lg overflow-hidden bg-gray-100">
             <Image
               src={product.image}
               alt={product.name}
@@ -85,16 +85,16 @@ export function ProductDetailPanel({ product, onClose }: ProductDetailPanelProps
 
           {/* Product Info */}
           <div>
-            <p className="text-sm text-gold font-semibold mb-2">{product.category}</p>
-            <h1 className="font-serif text-3xl text-black mb-3">{product.name}</h1>
+            <p className="text-xs md:text-sm text-gold font-semibold mb-2">{product.category}</p>
+            <h1 className="font-serif text-2xl md:text-3xl text-black mb-3">{product.name}</h1>
 
             {/* Price */}
-            <div className="flex items-center gap-3 mb-4">
-              <span className="text-2xl font-bold text-black">
+            <div className="flex items-center gap-3 mb-4 flex-wrap">
+              <span className="text-xl md:text-2xl font-bold text-black">
                 ${finalPrice.toFixed(2)}
               </span>
               {isSale && (
-                <span className="text-lg text-gray-500 line-through">
+                <span className="text-base md:text-lg text-gray-500 line-through">
                   ${product.price.toFixed(2)}
                 </span>
               )}
