@@ -44,7 +44,7 @@ export function Navbar() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-sm font-medium text-black hover:text-gold transition-colors"
+                className="text-sm font-medium text-black hover:text-gold hover:font-semibold transition-colors"
               >
                 {link.label}
               </Link>
@@ -74,7 +74,7 @@ export function Navbar() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="block px-4 py-2 text-sm font-medium text-black hover:text-gold transition-colors"
+                className="block px-4 py-2 text-sm font-medium text-black hover:text-gold hover:font-semibold transition-colors"
                 onClick={() => setMenuOpen(false)}
               >
                 {link.label}

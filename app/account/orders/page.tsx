@@ -24,7 +24,7 @@ export default function OrdersPage() {
     <>
       <Navbar />
 
-      <div className="bg-cream min-h-screen py-12">
+      <div className="bg-light-yellow min-h-screen py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-8">
             <h1 className="font-serif text-4xl text-black mb-4">My Orders</h1>
@@ -34,10 +34,10 @@ export default function OrdersPage() {
           </div>
 
           {mockOrders.length > 0 ? (
-            <div className="bg-white border border-gold/10 overflow-hidden">
+            <div className="bg-white border-2 border-gold overflow-hidden">
               <table className="w-full">
                 <thead>
-                  <tr className="border-b border-gold/20 bg-cream">
+                  <tr className="border-b-2 border-gold bg-light-yellow">
                     <th className="text-left py-4 px-6 font-semibold text-black">Order ID</th>
                     <th className="text-left py-4 px-6 font-semibold text-black">Date</th>
                     <th className="text-left py-4 px-6 font-semibold text-black">Items</th>
@@ -47,7 +47,7 @@ export default function OrdersPage() {
                 </thead>
                 <tbody>
                   {mockOrders.map((order) => (
-                    <tr key={order.id} className="border-b border-gold/10 hover:bg-cream transition-colors">
+                    <tr key={order.id} className="border-b-2 border-gold hover:bg-light-yellow transition-colors">
                       <td className="py-4 px-6 font-semibold text-black">{order.id}</td>
                       <td className="py-4 px-6 text-gray-700">{order.date}</td>
                       <td className="py-4 px-6 text-gray-700">{order.items}</td>
@@ -63,7 +63,7 @@ export default function OrdersPage() {
               </table>
             </div>
           ) : (
-            <div className="bg-white border border-gold/10 p-8 text-center">
+            <div className="bg-white border-2 border-gold p-8 text-center">
               <p className="text-gray-600 mb-4">You haven't placed any orders yet</p>
               <Link
                 href="/shop"

@@ -27,7 +27,7 @@ export default function WishlistPage() {
     return (
       <>
         <Navbar />
-        <div className="bg-cream min-h-screen py-20">
+        <div className="bg-light-yellow min-h-screen py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <Heart className="w-16 h-16 text-gold mx-auto mb-4 opacity-50" />
             <h1 className="font-serif text-4xl text-black mb-4">Your Wishlist</h1>
@@ -49,7 +49,7 @@ export default function WishlistPage() {
     <>
       <Navbar />
 
-      <div className="bg-cream min-h-screen py-12">
+      <div className="bg-light-yellow min-h-screen py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="font-serif text-4xl text-black mb-12">My Wishlist</h1>
 
@@ -57,7 +57,7 @@ export default function WishlistPage() {
             {wishlist.map((item) => (
               <div
                 key={item.id}
-                className="bg-white border border-gold/10 overflow-hidden hover:border-gold/30 transition-all"
+                className="bg-white border-2 border-gold overflow-hidden hover:border-gold transition-all"
               >
                 <div className="relative w-full h-80 bg-gray-100">
                   <Image src={item.image || "/placeholder.svg"} alt={item.name} fill className="object-cover" />

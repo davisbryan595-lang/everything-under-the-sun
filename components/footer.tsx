@@ -3,7 +3,7 @@ import { Mail, Phone, MapPin, Instagram, Facebook } from "lucide-react"
 
 export function Footer() {
   return (
-    <footer className="bg-cream text-black border-t border-gold/20">
+    <footer className="bg-light-yellow text-black border-t border-gold/20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6 md:gap-8">
           {/* Contact Info */}
@@ -94,7 +94,7 @@ export function Footer() {
               <input
                 type="email"
                 placeholder="Your email"
-                className="w-full px-3 py-2 bg-white border border-gold/30 text-black placeholder-gray-400 text-xs md:text-sm mb-2 focus:border-gold outline-none transition-colors"
+                className="w-full px-3 py-2 bg-white border-2 border-gold text-black placeholder-gray-400 text-xs md:text-sm mb-2 focus:border-gold outline-none transition-colors"
               />
               <button
                 type="submit"
@@ -114,7 +114,7 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-gold/20 mt-8 pt-8 text-center text-xs md:text-sm text-gray-600">
+        <div className="border-t-2 border-gold mt-8 pt-8 text-center text-xs md:text-sm text-gray-600">
           <p>&copy; 2025 Everything Under the Sun Boutique. All rights reserved.</p>
         </div>
       </div>
