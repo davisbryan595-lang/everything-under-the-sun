@@ -34,7 +34,8 @@
   --gold: oklch(0.8 0.15 60);
   --gold-dark: oklch(0.7 0.12 55);
   --black: oklch(0.1 0 0);
-  --cream: oklch(0.98 0.02 65);
+  --cream: oklch(0.96 0.08 70);
+  --light-yellow: oklch(0.96 0.08 70);
   --sidebar: oklch(0.985 0 0);
   --sidebar-foreground: oklch(0.145 0 0);
   --sidebar-primary: oklch(0.205 0 0);
@@ -126,7 +127,7 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-light-yellow text-foreground;
   }
 }
 
