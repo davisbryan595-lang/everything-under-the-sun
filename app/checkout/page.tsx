@@ -205,7 +205,7 @@ export default function CheckoutPage() {
 
                   <Link
                     href="/cart"
-                    className="w-full border-2 border-gold text-black py-3 font-semibold hover:bg-gold hover:text-black transition-colors block text-center mt-3"
+                    className="w-full border-2 border-gold text-white bg-black py-3 font-semibold hover:text-white transition-colors block text-center mt-3"
                   >
                     Return to Cart
                   </Link>
