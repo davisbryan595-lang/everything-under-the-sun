@@ -29,7 +29,7 @@ export function Navbar() {
           <Link href="/" className="flex-shrink-0">
             <div className="w-12 h-12 relative">
               <Image
-                src="/images/hitube-cds7hc5owt-2025-11-13-23-16-59.jpg"
+                src="/placeholder-logo.svg"
                 alt="Everything Under the Sun Boutique"
                 fill
                 className="object-contain"

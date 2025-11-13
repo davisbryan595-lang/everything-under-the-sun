@@ -39,7 +39,7 @@ export default function AboutPage() {
             </div>
             <div className="bg-gray-200 rounded-lg h-96 overflow-hidden">
               <Image
-                src="/products/p1.jpg"
+                src="/shop/IMG-20251114-WA0003.jpg"
                 alt="Boutique Collection"
                 width={400}
                 height={400}
