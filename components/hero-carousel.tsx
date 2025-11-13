@@ -49,7 +49,7 @@ export function HeroCarousel() {
           }`}
         >
           <Image
-            src={slide.image || "/placeholder.svg"}
+            src={slide.image || "/logoev.jpg"}
             alt={slide.title}
             fill
             className="object-cover"
