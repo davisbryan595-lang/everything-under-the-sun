@@ -9,61 +9,61 @@ import { ProductCard } from "@/components/product-card"
 const newArrivals = [
   {
     id: "1",
-    name: "Black Evening Gown",
-    price: 299,
-    image: "/product-1.jpg",
-    slug: "black-evening-gown",
+    name: "Black Casual Dress",
+    price: 49,
+    image: "/products/p1.jpg",
+    slug: "black-casual-dress",
   },
   {
     id: "2",
-    name: "White Silk Dress",
-    price: 249,
-    image: "/product-2.jpg",
-    slug: "white-silk-dress",
+    name: "White Cotton Dress",
+    price: 39,
+    image: "/products/p2.jpg",
+    slug: "white-cotton-dress",
     sale: true,
-    salePrice: 179,
+    salePrice: 29,
   },
   {
     id: "3",
-    name: "Designer Handbag",
-    price: 399,
-    image: "/product-3.jpg",
-    slug: "designer-handbag",
+    name: "Everyday Handbag",
+    price: 59,
+    image: "/products/p3.jpg",
+    slug: "everyday-handbag",
   },
   {
     id: "4",
-    name: "Luxury Heels",
-    price: 199,
-    image: "/product-4.jpg",
-    slug: "luxury-heels",
+    name: "Comfortable Flats",
+    price: 35,
+    image: "/products/p4.jpg",
+    slug: "comfortable-flats",
   },
   {
     id: "5",
-    name: "Black Evening Gown",
-    price: 299,
-    image: "/product-1.jpg",
-    slug: "black-evening-gown-2",
+    name: "Blue Denim Dress",
+    price: 45,
+    image: "/products/p1.jpg",
+    slug: "blue-denim-dress",
   },
   {
     id: "6",
-    name: "White Silk Dress",
-    price: 249,
-    image: "/product-2.jpg",
-    slug: "white-silk-dress-2",
+    name: "Summer Dress",
+    price: 38,
+    image: "/products/p2.jpg",
+    slug: "summer-dress",
   },
   {
     id: "7",
-    name: "Designer Handbag",
-    price: 399,
-    image: "/product-3.jpg",
-    slug: "designer-handbag-2",
+    name: "Crossbody Bag",
+    price: 55,
+    image: "/products/p3.jpg",
+    slug: "crossbody-bag",
   },
   {
     id: "8",
-    name: "Luxury Heels",
-    price: 199,
-    image: "/product-4.jpg",
-    slug: "luxury-heels-2",
+    name: "Casual Sneakers",
+    price: 45,
+    image: "/products/p4.jpg",
+    slug: "casual-sneakers",
   },
 ]
 
@@ -90,7 +90,7 @@ export default function Home() {
       <section className="py-16 md:py-20 bg-cream">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="font-serif text-4xl md:text-5xl text-black mb-4">New Arrivals</h2>
+            <h2 className="font-serif text-4xl md:text-5xl text-black mb-4">What's New</h2>
             <div className="w-24 h-1 bg-gold mx-auto"></div>
           </div>
 
