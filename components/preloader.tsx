@@ -5,10 +5,21 @@ import { useEffect, useState } from "react"
 export function Preloader() {
   const [isLoading, setIsLoading] = useState(true)
   const [progress, setProgress] = useState(0)
+  const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
+    setMounted(true)
+
+    // Only show preloader once per session
+    const hasShownPreloader = sessionStorage.getItem('preloaderShown')
+    if (hasShownPreloader) {
+      setIsLoading(false)
+      return
+    }
+
     const timer = setTimeout(() => {
       setIsLoading(false)
+      sessionStorage.setItem('preloaderShown', 'true')
     }, 2000)
 
     const progressInterval = setInterval(() => {
@@ -30,7 +41,7 @@ export function Preloader() {
     }
   }, [isLoading])
 
-  if (!isLoading && progress === 100) return null
+  if (!mounted || (!isLoading && progress === 100)) return null
 
   return (
     <div className="preloader-container">
