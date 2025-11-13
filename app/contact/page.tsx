@@ -25,7 +25,7 @@ export default function ContactPage() {
     <>
       <Navbar />
 
-      <div className="bg-cream min-h-screen">
+      <div className="bg-light-yellow min-h-screen">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="text-center mb-16">
             <h1 className="font-serif text-5xl text-black mb-4">Get in Touch</h1>
@@ -37,7 +37,7 @@ export default function ContactPage() {
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
             {/* Contact Info */}
-            <div className="bg-white border border-gold/10 p-8 text-center">
+            <div className="bg-white border-2 border-gold p-8 text-center">
               <Phone className="w-8 h-8 text-gold mx-auto mb-4" />
               <h3 className="font-serif text-xl text-black mb-2">Call Us</h3>
               <a href="tel:312-929-0496" className="text-gray-700 hover:text-gold transition-colors">
@@ -45,7 +45,7 @@ export default function ContactPage() {
               </a>
             </div>
 
-            <div className="bg-white border border-gold/10 p-8 text-center">
+            <div className="bg-white border-2 border-gold p-8 text-center">
               <Mail className="w-8 h-8 text-gold mx-auto mb-4" />
               <h3 className="font-serif text-xl text-black mb-2">Email</h3>
               <a href="mailto:hello@boutique.com" className="text-gray-700 hover:text-gold transition-colors">
@@ -53,7 +53,7 @@ export default function ContactPage() {
               </a>
             </div>
 
-            <div className="bg-white border border-gold/10 p-8 text-center">
+            <div className="bg-white border-2 border-gold p-8 text-center">
               <MapPin className="w-8 h-8 text-gold mx-auto mb-4" />
               <h3 className="font-serif text-xl text-black mb-2">Visit Us</h3>
               <p className="text-gray-700">
@@ -65,7 +65,7 @@ export default function ContactPage() {
           </div>
 
           {/* Hours */}
-          <div className="bg-white border border-gold/10 p-8 mb-16">
+          <div className="bg-white border-2 border-gold p-8 mb-16">
             <div className="flex items-center gap-3 mb-6">
               <Clock className="w-6 h-6 text-gold" />
               <h2 className="font-serif text-2xl text-black">Store Hours</h2>
@@ -87,7 +87,7 @@ export default function ContactPage() {
           </div>
 
           {/* Contact Form */}
-          <div className="bg-white border border-gold/10 p-8">
+          <div className="bg-white border-2 border-gold p-8">
             <h2 className="font-serif text-2xl text-black mb-6">Send Us a Message</h2>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -96,7 +96,7 @@ export default function ContactPage() {
                   placeholder="Your Name"
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  className="px-4 py-2 border border-gold/20 bg-white text-black placeholder-gray-500 focus:border-gold outline-none"
+                  className="px-4 py-2 border-2 border-gold bg-white text-black placeholder-gray-500 focus:border-gold outline-none"
                   required
                 />
                 <input
@@ -104,7 +104,7 @@ export default function ContactPage() {
                   placeholder="Your Email"
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  className="px-4 py-2 border border-gold/20 bg-white text-black placeholder-gray-500 focus:border-gold outline-none"
+                  className="px-4 py-2 border-2 border-gold bg-white text-black placeholder-gray-500 focus:border-gold outline-none"
                   required
                 />
               </div>
@@ -122,7 +122,7 @@ export default function ContactPage() {
                 value={formData.message}
                 onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                 rows={6}
-                className="w-full px-4 py-2 border border-gold/20 bg-white text-black placeholder-gray-500 focus:border-gold outline-none resize-none"
+                className="w-full px-4 py-2 border-2 border-gold bg-white text-black placeholder-gray-500 focus:border-gold outline-none resize-none"
                 required
               />
 
