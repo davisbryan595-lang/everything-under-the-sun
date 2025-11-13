@@ -325,7 +325,7 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
                       onClick={() => setSelectedSize(size)}
                       className={`py-3 text-sm font-semibold border-2 transition-colors ${
                         selectedSize === size
-                          ? "bg-black text-gold border-black"
+                          ? "bg-gold text-black border-gold"
                           : "bg-white text-black border-gold/20 hover:border-gold"
                       }`}
                     >
