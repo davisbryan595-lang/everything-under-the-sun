@@ -5,6 +5,7 @@ import { Preloader } from "@/components/preloader"
 import { HeroCarousel } from "@/components/hero-carousel"
 import { AnimatedCounters } from "@/components/animated-counters"
 import { ProductCard } from "@/components/product-card"
+import { Shirt, Shoe, ShoppingBag, Sparkles } from "lucide-react"
 
 const newArrivals = [
   {
@@ -70,10 +71,10 @@ const newArrivals = [
 ]
 
 const categories = [
-  { name: "Clothing", href: "/shop?category=dresses" },
-  { name: "Footwear", href: "/shop?category=shoes" },
-  { name: "Bags & Purses", href: "/shop?category=purses" },
-  { name: "Accessories & More", href: "/shop?category=accessories" },
+  { name: "Clothing", href: "/shop?category=dresses", icon: Shirt },
+  { name: "Footwear", href: "/shop?category=shoes", icon: Shoe },
+  { name: "Bags & Purses", href: "/shop?category=purses", icon: ShoppingBag },
+  { name: "Accessories & More", href: "/shop?category=accessories", icon: Sparkles },
 ]
 
 export default function Home() {
@@ -122,18 +123,24 @@ export default function Home() {
             <div className="w-24 h-1 bg-gold mx-auto"></div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {categories.map((category) => (
-              <Link
-                key={category.name}
-                href={category.href}
-                className="group relative overflow-hidden h-64 flex items-center justify-center bg-gray-100 hover:bg-gray-200 transition-colors border-2 border-gold"
-              >
-                <div className="absolute inset-0 bg-gold/10 group-hover:bg-gold/20 transition-colors" />
-                <h3 className="font-serif text-3xl text-black group-hover:text-gold transition-colors relative z-10">
-                  {category.name}
-                </h3>
-              </Link>
-            ))}
+            {categories.map((category) => {
+              const IconComponent = category.icon
+              return (
+                <Link
+                  key={category.name}
+                  href={category.href}
+                  className="group relative overflow-hidden h-64 flex flex-col items-center justify-center bg-gray-100 hover:bg-gray-200 transition-colors border-2 border-gold"
+                >
+                  <div className="absolute inset-0 bg-gold/10 group-hover:bg-gold/20 transition-colors" />
+                  <div className="relative z-10 flex flex-col items-center gap-4">
+                    <IconComponent className="w-16 h-16 text-gold group-hover:text-gold-dark transition-colors" />
+                    <h3 className="font-serif text-3xl text-black group-hover:text-gold transition-colors text-center">
+                      {category.name}
+                    </h3>
+                  </div>
+                </Link>
+              )
+            })}
           </div>
         </div>
       </section>
