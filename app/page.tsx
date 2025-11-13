@@ -70,10 +70,10 @@ const newArrivals = [
 ]
 
 const categories = [
-  { name: "Dresses", href: "/shop?category=dresses" },
-  { name: "Shoes", href: "/shop?category=shoes" },
-  { name: "Purses", href: "/shop?category=purses" },
-  { name: "Accessories", href: "/shop?category=accessories" },
+  { name: "Clothing", href: "/shop?category=dresses" },
+  { name: "Footwear", href: "/shop?category=shoes" },
+  { name: "Bags & Purses", href: "/shop?category=purses" },
+  { name: "Accessories & More", href: "/shop?category=accessories" },
 ]
 
 export default function Home() {
@@ -92,7 +92,8 @@ export default function Home() {
       <section className="py-16 md:py-20 bg-cream">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="font-serif text-4xl md:text-5xl text-black mb-4">What's New</h2>
+            <h2 className="font-serif text-4xl md:text-5xl text-black mb-4">Just In</h2>
+            <p className="text-gray-600 mb-4">Fresh arrivals in clothing, accessories, purses, and lifestyle products</p>
             <div className="w-24 h-1 bg-gold mx-auto"></div>
           </div>
 

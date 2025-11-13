@@ -9,20 +9,20 @@ const slides = [
   {
     id: 1,
     image: "https://images.pexels.com/photos/7159432/pexels-photo-7159432.jpeg",
-    title: "Fresh Styles",
-    subtitle: "Great prices on quality dresses for everyday wear",
+    title: "Everything You Need",
+    subtitle: "Clothing, purses, accessories, and more - all in one place",
   },
   {
     id: 2,
     image: "https://images.pexels.com/photos/17244602/pexels-photo-17244602.jpeg",
-    title: "Everyday Fashion",
-    subtitle: "Affordable pieces that work for any occasion",
+    title: "Style Without The Price",
+    subtitle: "Quality fashion and lifestyle products at prices that fit your budget",
   },
   {
     id: 3,
     image: "https://images.pexels.com/photos/27035625/pexels-photo-27035625.jpeg",
-    title: "Look Good, Feel Great",
-    subtitle: "Everything you need, under the sun",
+    title: "Your One-Stop Shop",
+    subtitle: "Everything under the sun for your lifestyle",
   },
 ]
 
