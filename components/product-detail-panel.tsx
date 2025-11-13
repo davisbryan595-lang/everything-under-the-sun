@@ -142,7 +142,7 @@ export function ProductDetailPanel({ product, onClose }: ProductDetailPanelProps
           <div className="space-y-3 pt-4">
             <button
               onClick={handleAddToCart}
-              className="w-full bg-black text-white py-3 md:py-4 font-semibold text-sm md:text-base hover:text-white transition-colors flex items-center justify-center gap-2 rounded"
+              className="w-full bg-black text-white py-3 md:py-4 font-semibold text-sm md:text-base hover:text-white transition-colors flex items-center justify-center gap-2 rounded btn-lift"
             >
               <ShoppingCart className="w-4 md:w-5 h-4 md:h-5" />
               Add to Cart
