@@ -80,7 +80,7 @@ export default function AdminPage() {
     <>
       <Navbar />
 
-      <div className="bg-cream min-h-screen py-12">
+      <div className="bg-light-yellow min-h-screen py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Header */}
           <div className="flex justify-between items-center mb-8">
@@ -95,31 +95,31 @@ export default function AdminPage() {
 
           {/* Dashboard Grid */}
           <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-12">
-            <div className="bg-white border border-gold/10 p-6 text-center">
+            <div className="bg-white border-2 border-gold p-6 text-center">
               <div className="text-3xl font-bold text-gold mb-2">15</div>
               <p className="text-gray-600">Total Orders</p>
             </div>
-            <div className="bg-white border border-gold/10 p-6 text-center">
+            <div className="bg-white border-2 border-gold p-6 text-center">
               <div className="text-3xl font-bold text-gold mb-2">$12,450</div>
               <p className="text-gray-600">Total Revenue</p>
             </div>
-            <div className="bg-white border border-gold/10 p-6 text-center">
+            <div className="bg-white border-2 border-gold p-6 text-center">
               <div className="text-3xl font-bold text-gold mb-2">32</div>
               <p className="text-gray-600">Products</p>
             </div>
-            <div className="bg-white border border-gold/10 p-6 text-center">
+            <div className="bg-white border-2 border-gold p-6 text-center">
               <div className="text-3xl font-bold text-gold mb-2">248</div>
               <p className="text-gray-600">Customers</p>
             </div>
           </div>
 
           {/* Recent Orders */}
-          <div className="bg-white border border-gold/10 p-6 mb-12">
+          <div className="bg-white border-2 border-gold p-6 mb-12">
             <h2 className="font-serif text-2xl text-black mb-6">Recent Orders</h2>
             <div className="overflow-x-auto">
               <table className="w-full text-sm">
                 <thead>
-                  <tr className="border-b border-gold/20">
+                  <tr className="border-b-2 border-gold">
                     <th className="text-left py-3 px-4 font-semibold text-black">Order ID</th>
                     <th className="text-left py-3 px-4 font-semibold text-black">Customer</th>
                     <th className="text-left py-3 px-4 font-semibold text-black">Items</th>
@@ -130,7 +130,7 @@ export default function AdminPage() {
                 </thead>
                 <tbody>
                   {mockOrders.map((order) => (
-                    <tr key={order.id} className="border-b border-gold/10 hover:bg-cream">
+                    <tr key={order.id} className="border-b-2 border-gold hover:bg-light-yellow">
                       <td className="py-3 px-4 font-semibold text-black">{order.id}</td>
                       <td className="py-3 px-4 text-gray-700">{order.customer}</td>
                       <td className="py-3 px-4 text-gray-700">{order.items}</td>
@@ -157,7 +157,7 @@ export default function AdminPage() {
           </div>
 
           {/* Product Management */}
-          <div className="bg-white border border-gold/10 p-6">
+          <div className="bg-white border-2 border-gold p-6">
             <div className="flex justify-between items-center mb-6">
               <h2 className="font-serif text-2xl text-black">Product Management</h2>
               <button
@@ -170,14 +170,14 @@ export default function AdminPage() {
             </div>
 
             {showProductForm && (
-              <form onSubmit={handleAddProduct} className="mb-6 p-4 bg-cream border border-gold/20">
+              <form onSubmit={handleAddProduct} className="mb-6 p-4 bg-light-yellow border-2 border-gold">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
                   <input
                     type="text"
                     placeholder="Product Name"
                     value={newProduct.name}
                     onChange={(e) => setNewProduct({ ...newProduct, name: e.target.value })}
-                    className="px-4 py-2 border border-gold/20 bg-white text-black placeholder-gray-500 focus:border-gold outline-none"
+                    className="px-4 py-2 border-2 border-gold bg-white text-black placeholder-gray-500 focus:border-gold outline-none"
                     required
                   />
                   <input
@@ -185,7 +185,7 @@ export default function AdminPage() {
                     placeholder="Price"
                     value={newProduct.price}
                     onChange={(e) => setNewProduct({ ...newProduct, price: e.target.value })}
-                    className="px-4 py-2 border border-gold/20 bg-white text-black placeholder-gray-500 focus:border-gold outline-none"
+                    className="px-4 py-2 border-2 border-gold bg-white text-black placeholder-gray-500 focus:border-gold outline-none"
                     required
                   />
                   <select
@@ -209,7 +209,7 @@ export default function AdminPage() {
                   <button
                     type="button"
                     onClick={() => setShowProductForm(false)}
-                    className="border border-gold/20 text-black px-6 py-2 font-semibold hover:border-gold transition-colors"
+                    className="border-2 border-gold text-black px-6 py-2 font-semibold hover:bg-gold hover:text-black transition-colors"
                   >
                     Cancel
                   </button>
@@ -228,7 +228,7 @@ export default function AdminPage() {
               </thead>
               <tbody>
                 {[...Array(5)].map((_, i) => (
-                  <tr key={i} className="border-b border-gold/10 hover:bg-cream">
+                  <tr key={i} className="border-b-2 border-gold hover:bg-light-yellow">
                     <td className="py-3 px-4 font-semibold text-black">Sample Product {i + 1}</td>
                     <td className="py-3 px-4 text-gray-700">Dresses</td>
                     <td className="py-3 px-4 font-semibold text-black">$299.00</td>
