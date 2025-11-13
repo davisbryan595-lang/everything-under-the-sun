@@ -1,7 +1,6 @@
 import Link from "next/link"
 import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
-import { Preloader } from "@/components/preloader"
 import { HeroCarousel } from "@/components/hero-carousel"
 import { AnimatedCounters } from "@/components/animated-counters"
 import { ProductCard } from "@/components/product-card"
@@ -80,7 +79,6 @@ const categories = [
 export default function Home() {
   return (
     <>
-      <Preloader />
       <Navbar />
 
       {/* Hero Carousel */}
