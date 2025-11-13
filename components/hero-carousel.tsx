@@ -8,19 +8,19 @@ import { ChevronLeft, ChevronRight } from "lucide-react"
 const slides = [
   {
     id: 1,
-    image: "/hero-1.jpg",
+    image: "https://images.pexels.com/photos/7159432/pexels-photo-7159432.jpeg",
     title: "Fresh Styles",
     subtitle: "Great prices on quality dresses for everyday wear",
   },
   {
     id: 2,
-    image: "/hero-2.jpg",
+    image: "https://images.pexels.com/photos/17244602/pexels-photo-17244602.jpeg",
     title: "Everyday Fashion",
     subtitle: "Affordable pieces that work for any occasion",
   },
   {
     id: 3,
-    image: "/hero-3.jpg",
+    image: "https://images.pexels.com/photos/27035625/pexels-photo-27035625.jpeg",
     title: "Look Good, Feel Great",
     subtitle: "Everything you need, under the sun",
   },
