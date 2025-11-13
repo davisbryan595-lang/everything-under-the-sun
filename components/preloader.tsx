@@ -4,44 +4,66 @@ import { useEffect, useState } from "react"
 
 export function Preloader() {
   const [isLoading, setIsLoading] = useState(true)
+  const [progress, setProgress] = useState(0)
 
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsLoading(false)
     }, 2000)
 
-    return () => clearTimeout(timer)
+    const progressInterval = setInterval(() => {
+      setProgress((prev) => {
+        const next = prev + Math.random() * 30
+        return next > 90 ? 90 : next
+      })
+    }, 300)
+
+    return () => {
+      clearTimeout(timer)
+      clearInterval(progressInterval)
+    }
   }, [])
 
-  if (!isLoading) return null
+  useEffect(() => {
+    if (!isLoading) {
+      setProgress(100)
+    }
+  }, [isLoading])
+
+  if (!isLoading && progress === 100) return null
 
   return (
-    <div className="fixed inset-0 bg-black z-50 flex items-center justify-center">
-      <div className="flex flex-col items-center gap-4">
-        <div className="sunburst-spin">
-          <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-            {/* Sun rays */}
-            {[...Array(12)].map((_, i) => (
-              <line
-                key={i}
-                x1="40"
-                y1="5"
-                x2="40"
-                y2="15"
-                stroke="currentColor"
-                strokeWidth="2"
-                className="text-yellow-400"
-                style={{
-                  transform: `rotate(${(i * 360) / 12}deg)`,
-                  transformOrigin: "40px 40px",
-                }}
-              />
-            ))}
-            {/* Sun circle */}
-            <circle cx="40" cy="40" r="25" fill="currentColor" className="text-yellow-400" />
+    <div className="preloader-container">
+      <div className="preloader-content">
+        {/* Main Logo Animation */}
+        <div className="preloader-logo">
+          <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+            {/* Outer circle */}
+            <circle cx="60" cy="60" r="55" stroke="currentColor" strokeWidth="1.5" className="preloader-outer-circle" opacity="0.3" />
+            
+            {/* Animated rotating circle */}
+            <circle cx="60" cy="60" r="50" stroke="currentColor" strokeWidth="2" className="preloader-rotating-circle" fill="none" strokeDasharray="157" strokeDashoffset="0" />
+            
+            {/* Inner geometric shape */}
+            <g className="preloader-inner-shape">
+              <polygon points="60,25 75,45 65,60 75,75 60,95 45,75 55,60 45,45" fill="none" stroke="currentColor" strokeWidth="1.5" />
+            </g>
+            
+            {/* Center dot */}
+            <circle cx="60" cy="60" r="4" fill="currentColor" className="preloader-center" />
           </svg>
         </div>
-        <p className="text-yellow-400 text-lg font-serif tracking-wider">Loading the sunshine...</p>
+
+        {/* Text */}
+        <div className="preloader-text">
+          <h2 className="preloader-title">Curating Your Experience</h2>
+          <p className="preloader-subtitle">Discovering timeless elegance</p>
+        </div>
+
+        {/* Progress Bar */}
+        <div className="preloader-progress">
+          <div className="preloader-progress-bar" style={{ width: `${progress}%` }} />
+        </div>
       </div>
     </div>
   )
