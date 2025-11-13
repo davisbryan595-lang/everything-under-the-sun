@@ -20,26 +20,26 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-16">
             <div>
-              <h2 className="font-serif text-4xl text-black mb-6">Luxury Fashion Since Day One</h2>
+              <h2 className="font-serif text-4xl text-black mb-6">Great Style, Fair Prices</h2>
               <p className="text-gray-700 mb-4 leading-relaxed">
-                Everything Under the Sun Boutique was founded with a simple mission: to bring luxury, elegance, and
-                sophistication to Hazel Crest. We believe that every woman deserves to feel confident, beautiful, and
-                empowered.
+                Everything Under the Sun Boutique was founded with a simple mission: to make quality fashion
+                accessible and affordable for everyone. We believe that every woman deserves to look and feel great
+                without breaking the bank.
               </p>
               <p className="text-gray-700 mb-4 leading-relaxed">
-                Our carefully curated collection features premium dresses, designer shoes, luxury handbags, and
-                exquisite accessories from the finest brands. Each piece is hand-selected by our team of fashion experts
-                to ensure quality and style.
+                Our collection features affordable dresses, shoes, bags, and accessories that are
+                practical for everyday wear. Each piece is selected by our team for comfort, durability,
+                and value.
               </p>
               <p className="text-gray-700 leading-relaxed">
-                We're proud to serve our community and have become Hazel Crest's destination for luxury women's fashion.
-                Thank you for supporting us.
+                We're proud to serve our community and have become Hazel Crest's go-to shop for stylish,
+                affordable women's fashion. Thank you for supporting us.
               </p>
             </div>
             <div className="bg-gray-200 rounded-lg h-96 overflow-hidden">
               <Image
-                src="/luxury-boutique-interior.jpg"
-                alt="Boutique Interior"
+                src="/products/p1.jpg"
+                alt="Boutique Collection"
                 width={400}
                 height={400}
                 className="w-full h-full object-cover"
@@ -49,20 +49,20 @@ export default function AboutPage() {
 
           {/* Values Section */}
           <div className="mb-16">
-            <h2 className="font-serif text-4xl text-black text-center mb-12">Our Values</h2>
+            <h2 className="font-serif text-4xl text-black text-center mb-12">Why Shop With Us</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {[
                 {
-                  title: "Quality",
-                  description: "We only offer the finest quality pieces from trusted designers.",
+                  title: "Affordable",
+                  description: "Great quality pieces at prices that work for your budget.",
                 },
                 {
-                  title: "Elegance",
-                  description: "Every item is chosen for its timeless style and sophistication.",
+                  title: "Practical",
+                  description: "Fashion designed for real life and everyday wear.",
                 },
                 {
-                  title: "Service",
-                  description: "Your satisfaction is our priority. Exceptional service, always.",
+                  title: "Friendly",
+                  description: "Helpful service and a welcoming shopping experience.",
                 },
               ].map((value) => (
                 <div key={value.title} className="text-center">
