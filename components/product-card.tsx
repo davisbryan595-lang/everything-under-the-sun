@@ -52,13 +52,13 @@ export function ProductCard({ id, name, price, image, sale, salePrice, slug }: P
           <div className="space-y-3">
             <button
               onClick={handleAddToCart}
-              className="w-40 bg-gold text-black py-3 font-semibold hover:bg-gold-dark transition-colors"
+              className="w-40 bg-gold text-white py-3 font-semibold hover:text-white transition-colors"
             >
               Quick Add
             </button>
             <Link
               href={`/shop/${slug}`}
-              className="w-40 bg-cream text-gold border border-gold py-3 font-semibold hover:bg-gold hover:text-black transition-colors block text-center"
+              className="w-40 bg-black text-white border border-gold py-3 font-semibold hover:text-white transition-colors block text-center"
             >
               View Details
             </Link>
