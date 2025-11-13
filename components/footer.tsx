@@ -8,8 +8,8 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6 md:gap-8">
           {/* Contact Info */}
           <div className="col-span-1">
-            <h3 className="font-serif text-xl mb-4 text-gold">Visit Us</h3>
-            <div className="space-y-3 text-sm text-gray-700">
+            <h3 className="font-serif text-lg md:text-xl mb-4 text-gold">Visit Us</h3>
+            <div className="space-y-3 text-xs md:text-sm text-gray-700">
               <div className="flex items-start gap-2">
                 <MapPin className="w-5 h-5 text-gold mt-0.5 flex-shrink-0" />
                 <p>
