@@ -9,11 +9,16 @@ export function Preloader() {
 
   useEffect(() => {
     setMounted(true)
+  }, [])
+
+  useEffect(() => {
+    if (!mounted) return
 
     // Only show preloader once per session
     const hasShownPreloader = sessionStorage.getItem('preloaderShown')
     if (hasShownPreloader) {
       setIsLoading(false)
+      setProgress(100)
       return
     }
 
@@ -33,7 +38,7 @@ export function Preloader() {
       clearTimeout(timer)
       clearInterval(progressInterval)
     }
-  }, [])
+  }, [mounted])
 
   useEffect(() => {
     if (!isLoading) {
