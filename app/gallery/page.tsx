@@ -1,21 +1,100 @@
+'use client'
+
+import { useState } from 'react'
 import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
+import { ProductDetailPanel } from "@/components/product-detail-panel"
 import Image from "next/image"
 
+interface Product {
+  id: string
+  name: string
+  price: number
+  salePrice?: number
+  image: string
+  description: string
+  category: string
+  alt: string
+}
+
 export default function GalleryPage() {
-  const galleryImages = [
-    { id: 1, src: "/products/p1.jpg", alt: "Classic Black Dress styling" },
-    { id: 2, src: "/products/p2.jpg", alt: "White Linen Top outfit" },
-    { id: 3, src: "/products/p3.jpg", alt: "Crossbody Shoulder Bag styling" },
-    { id: 4, src: "/products/p4.jpg", alt: "Designer handbag collection" },
-    { id: 5, src: "https://images.pexels.com/photos/27035625/pexels-photo-27035625.jpeg", alt: "Black Leather Tote styling" },
-    { id: 6, src: "/products/p6.jpg", alt: "Fashion accessories display" },
-    { id: 7, src: "https://images.pexels.com/photos/1464625/pexels-photo-1464625.jpeg", alt: "White Canvas Sneakers outfit" },
-    { id: 8, src: "https://images.pexels.com/photos/6030460/pexels-photo-6030460.jpeg", alt: "Ceramic Coffee Mug lifestyle" },
-    { id: 9, src: "/products/Hitube_6au0Wfzkah_2025_11_14_00_14_12.jpg", alt: "Fashion styling inspiration 1" },
-    { id: 10, src: "/products/Hitube_9JGmjDuhhg_2025_11_14_00_16_18.jpg", alt: "Fashion styling inspiration 2" },
-    { id: 11, src: "/products/Hitube_XYVGHmvq1N_2025_11_14_00_08_07.jpg", alt: "Fashion styling inspiration 3" },
-    { id: 12, src: "/products/Hitube_cB6QRKbVua_2025_11_14_00_15_22.jpg", alt: "Fashion styling inspiration 4" },
+  const [selectedProduct, setSelectedProduct] = useState<Product | null>(null)
+
+  const galleryProducts: Product[] = [
+    {
+      id: "1",
+      name: "Classic Black Dress",
+      price: 49,
+      image: "/products/p1.jpg",
+      alt: "Classic Black Dress styling",
+      category: "Clothing",
+      description: "A timeless classic black dress that transitions seamlessly from day to night. Crafted from premium fabric with a flattering silhouette, this dress is a versatile staple for any wardrobe. Perfect for work events, casual outings, or elegant evenings.",
+    },
+    {
+      id: "2",
+      name: "White Linen Top",
+      price: 39,
+      salePrice: 29,
+      image: "/products/p2.jpg",
+      alt: "White Linen Top outfit",
+      category: "Clothing",
+      description: "Breathable white linen top featuring a clean, minimalist design. Ideal for warm weather, this top can be dressed up or down depending on the occasion. The natural linen fabric offers comfort and elegance in one beautiful piece.",
+    },
+    {
+      id: "3",
+      name: "Crossbody Shoulder Bag",
+      price: 55,
+      image: "/products/p3.jpg",
+      alt: "Crossbody Shoulder Bag styling",
+      category: "Bags & Purses",
+      description: "Functional and stylish crossbody bag with adjustable strap for all-day wear. Features multiple compartments for organized storage and durable construction. The perfect companion for shopping, travel, or everyday adventures.",
+    },
+    {
+      id: "4",
+      name: "Designer Handbag",
+      price: 89,
+      image: "/products/p4.jpg",
+      alt: "Designer handbag collection",
+      category: "Bags & Purses",
+      description: "Elegant designer handbag crafted with attention to detail. Premium materials and sophisticated design make this bag a statement piece that complements any outfit. Spacious enough for daily essentials with refined aesthetic.",
+    },
+    {
+      id: "5",
+      name: "Black Leather Tote",
+      price: 59,
+      image: "https://images.pexels.com/photos/27035625/pexels-photo-27035625.jpeg",
+      alt: "Black Leather Tote styling",
+      category: "Bags & Purses",
+      description: "Sophisticated black leather tote featuring quality craftsmanship and professional styling. Perfect for work or weekend getaways, this tote offers ample space without compromising on elegance. Durable leather improves with age.",
+    },
+    {
+      id: "6",
+      name: "Fashion Accessories Set",
+      price: 35,
+      image: "/products/p6.jpg",
+      alt: "Fashion accessories display",
+      category: "Accessories",
+      description: "Curated collection of fashion accessories to elevate any outfit. Includes versatile pieces that pair well together or separately. Mix and match to create your signature style.",
+    },
+    {
+      id: "7",
+      name: "White Canvas Sneakers",
+      price: 45,
+      image: "https://images.pexels.com/photos/1464625/pexels-photo-1464625.jpeg",
+      alt: "White Canvas Sneakers outfit",
+      category: "Footwear",
+      description: "Classic white canvas sneakers that go with everything. Comfortable for all-day wear with a timeless design that never goes out of style. The perfect foundation for casual, sporty, or even dressed-up looks.",
+    },
+    {
+      id: "8",
+      name: "Ceramic Coffee Mug",
+      price: 18,
+      salePrice: 12,
+      image: "https://images.pexels.com/photos/6030460/pexels-photo-6030460.jpeg",
+      alt: "Ceramic Coffee Mug lifestyle",
+      category: "Accessories & More",
+      description: "Beautiful ceramic coffee mug perfect for your morning brew. Handcrafted with attention to detail, this mug combines functionality with artistic design. A thoughtful gift for coffee lovers.",
+    },
   ]
 
   return (
