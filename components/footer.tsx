@@ -3,13 +3,13 @@ import { Mail, Phone, MapPin, Instagram, Facebook } from "lucide-react"
 
 export function Footer() {
   return (
-    <footer className="bg-black text-white">
+    <footer className="bg-cream text-black border-t border-gold/20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Contact Info */}
           <div className="col-span-1">
             <h3 className="font-serif text-xl mb-4 text-gold">Visit Us</h3>
-            <div className="space-y-3 text-sm text-gray-300">
+            <div className="space-y-3 text-sm text-gray-700">
               <div className="flex items-start gap-2">
                 <MapPin className="w-5 h-5 text-gold mt-0.5 flex-shrink-0" />
                 <p>
@@ -36,7 +36,7 @@ export function Footer() {
           {/* Quick Links */}
           <div>
             <h3 className="font-serif text-xl mb-4 text-gold">Quick Links</h3>
-            <ul className="space-y-2 text-sm text-gray-300">
+            <ul className="space-y-2 text-sm text-gray-700">
               <li>
                 <Link href="/shop" className="hover:text-gold transition-colors">
                   Shop
@@ -63,7 +63,7 @@ export function Footer() {
           {/* Customer Service */}
           <div>
             <h3 className="font-serif text-xl mb-4 text-gold">Customer Service</h3>
-            <ul className="space-y-2 text-sm text-gray-300">
+            <ul className="space-y-2 text-sm text-gray-700">
               <li>
                 <Link href="/shipping" className="hover:text-gold transition-colors">
                   Shipping
@@ -94,7 +94,7 @@ export function Footer() {
               <input
                 type="email"
                 placeholder="Your email"
-                className="w-full px-3 py-2 bg-gray-900 border border-gold/30 text-white placeholder-gray-500 text-sm mb-2 focus:border-gold outline-none transition-colors"
+                className="w-full px-3 py-2 bg-white border border-gold/30 text-black placeholder-gray-400 text-sm mb-2 focus:border-gold outline-none transition-colors"
               />
               <button
                 type="submit"
@@ -114,7 +114,7 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-gray-800 mt-8 pt-8 text-center text-sm text-gray-400">
+        <div className="border-t border-gold/20 mt-8 pt-8 text-center text-sm text-gray-600">
           <p>&copy; 2025 Everything Under the Sun Boutique. All rights reserved.</p>
         </div>
       </div>

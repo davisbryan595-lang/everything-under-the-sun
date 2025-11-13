@@ -30,7 +30,8 @@ export default function ContactPage() {
           <div className="text-center mb-16">
             <h1 className="font-serif text-5xl text-black mb-4">Get in Touch</h1>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Have questions? We'd love to hear from you. Contact us today!
+              Have questions about our clothing, purses, accessories, or anything else? We'd love to hear from you.
+              Contact Everything Under the Sun Boutique today!
             </p>
           </div>
 

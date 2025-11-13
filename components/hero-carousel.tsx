@@ -8,21 +8,21 @@ import { ChevronLeft, ChevronRight } from "lucide-react"
 const slides = [
   {
     id: 1,
-    image: "/hero-1.jpg",
-    title: "Timeless Elegance",
-    subtitle: "Discover our curated collection of luxury dresses",
+    image: "https://images.pexels.com/photos/7159432/pexels-photo-7159432.jpeg",
+    title: "Everything You Need",
+    subtitle: "Clothing, purses, accessories, and more - all in one place",
   },
   {
     id: 2,
-    image: "/hero-2.jpg",
-    title: "Pure Sophistication",
-    subtitle: "Elevate your style with premium pieces",
+    image: "https://images.pexels.com/photos/17244602/pexels-photo-17244602.jpeg",
+    title: "Style Without The Price",
+    subtitle: "Quality fashion and lifestyle products at prices that fit your budget",
   },
   {
     id: 3,
-    image: "/hero-3.jpg",
-    title: "Luxury Redefined",
-    subtitle: "Everything you need, under the sun",
+    image: "https://images.pexels.com/photos/27035625/pexels-photo-27035625.jpeg",
+    title: "Your One-Stop Shop",
+    subtitle: "Everything under the sun for your lifestyle",
   },
 ]
 
@@ -55,8 +55,8 @@ export function HeroCarousel() {
             className="object-cover"
             priority={index === 0}
           />
-          <div className="absolute inset-0 bg-black/30" />
-          <div className="absolute inset-0 flex flex-col items-center justify-center text-white text-center px-4">
+          <div className="absolute inset-0 bg-white/10" />
+          <div className="absolute inset-0 flex flex-col items-center justify-center text-black text-center px-4">
             <h1 className="font-serif text-4xl md:text-6xl mb-4 fade-in">{slide.title}</h1>
             <p className="text-lg md:text-xl mb-8 max-w-2xl fade-in">{slide.subtitle}</p>
             <Link

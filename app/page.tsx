@@ -9,69 +9,71 @@ import { ProductCard } from "@/components/product-card"
 const newArrivals = [
   {
     id: "1",
-    name: "Black Evening Gown",
-    price: 299,
-    image: "/product-1.jpg",
-    slug: "black-evening-gown",
+    name: "Classic Black Dress",
+    price: 49,
+    image: "/products/p1.jpg",
+    slug: "black-casual-dress",
   },
   {
     id: "2",
-    name: "White Silk Dress",
-    price: 249,
-    image: "/product-2.jpg",
-    slug: "white-silk-dress",
+    name: "White Linen Top",
+    price: 39,
+    image: "/products/p2.jpg",
+    slug: "white-cotton-dress",
     sale: true,
-    salePrice: 179,
+    salePrice: 29,
   },
   {
     id: "3",
-    name: "Designer Handbag",
-    price: 399,
-    image: "/product-3.jpg",
-    slug: "designer-handbag",
+    name: "Black Leather Tote",
+    price: 59,
+    image: "https://images.pexels.com/photos/27035625/pexels-photo-27035625.jpeg",
+    slug: "everyday-handbag",
   },
   {
     id: "4",
-    name: "Luxury Heels",
-    price: 199,
-    image: "/product-4.jpg",
-    slug: "luxury-heels",
+    name: "White Canvas Sneakers",
+    price: 45,
+    image: "https://images.pexels.com/photos/1464625/pexels-photo-1464625.jpeg",
+    slug: "comfortable-sneakers",
   },
   {
     id: "5",
-    name: "Black Evening Gown",
-    price: 299,
-    image: "/product-1.jpg",
-    slug: "black-evening-gown-2",
+    name: "Denim Jacket",
+    price: 65,
+    image: "/products/p1.jpg",
+    slug: "blue-denim-dress",
   },
   {
     id: "6",
-    name: "White Silk Dress",
-    price: 249,
-    image: "/product-2.jpg",
-    slug: "white-silk-dress-2",
+    name: "Beige Summer Cardigan",
+    price: 38,
+    image: "/products/p2.jpg",
+    slug: "summer-dress",
   },
   {
     id: "7",
-    name: "Designer Handbag",
-    price: 399,
-    image: "/product-3.jpg",
-    slug: "designer-handbag-2",
+    name: "Crossbody Shoulder Bag",
+    price: 55,
+    image: "/products/p3.jpg",
+    slug: "classic-handbag",
   },
   {
     id: "8",
-    name: "Luxury Heels",
-    price: 199,
-    image: "/product-4.jpg",
-    slug: "luxury-heels-2",
+    name: "Ceramic Coffee Mug",
+    price: 18,
+    image: "https://images.pexels.com/photos/6030460/pexels-photo-6030460.jpeg",
+    slug: "coffee-tumbler",
+    sale: true,
+    salePrice: 12,
   },
 ]
 
 const categories = [
-  { name: "Dresses", href: "/shop?category=dresses" },
-  { name: "Shoes", href: "/shop?category=shoes" },
-  { name: "Purses", href: "/shop?category=purses" },
-  { name: "Accessories", href: "/shop?category=accessories" },
+  { name: "Clothing", href: "/shop?category=dresses" },
+  { name: "Footwear", href: "/shop?category=shoes" },
+  { name: "Bags & Purses", href: "/shop?category=purses" },
+  { name: "Accessories & More", href: "/shop?category=accessories" },
 ]
 
 export default function Home() {
@@ -90,7 +92,8 @@ export default function Home() {
       <section className="py-16 md:py-20 bg-cream">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="font-serif text-4xl md:text-5xl text-black mb-4">New Arrivals</h2>
+            <h2 className="font-serif text-4xl md:text-5xl text-black mb-4">Just In</h2>
+            <p className="text-gray-600 mb-4">Fresh arrivals in clothing, accessories, purses, and lifestyle products</p>
             <div className="w-24 h-1 bg-gold mx-auto"></div>
           </div>
 
@@ -135,8 +138,8 @@ export default function Home() {
       <section className="py-16 md:py-20 bg-cream">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="font-serif text-4xl md:text-5xl text-black mb-4">Follow Our Instagram</h2>
-            <p className="text-gray-600">@everythingunderthesun</p>
+            <h2 className="font-serif text-4xl md:text-5xl text-black mb-4">Follow @EverythingUnderTheSun</h2>
+            <p className="text-gray-600">Discover new arrivals, styling tips, and exclusive deals</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">

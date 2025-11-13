@@ -6,7 +6,7 @@ export default function GalleryPage() {
   const galleryImages = Array.from({ length: 12 }, (_, i) => ({
     id: i + 1,
     alt: `Gallery image ${i + 1}`,
-    query: "luxury fashion outfit styling",
+    query: "casual everyday outfit styling",
   }))
 
   return (
@@ -15,9 +15,9 @@ export default function GalleryPage() {
 
       <div className="bg-cream min-h-screen">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <h1 className="font-serif text-5xl text-black mb-4 text-center">Gallery</h1>
+          <h1 className="font-serif text-5xl text-black mb-4 text-center">Style Inspiration</h1>
           <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
-            Explore our collection and see how our customers style their favorite pieces.
+            See how our customers style their favorite clothing, accessories, and purses from Everything Under the Sun.
           </p>
 
           {/* Masonry Grid */}

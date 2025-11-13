@@ -9,7 +9,7 @@ export default function AboutPage() {
 
       <div className="bg-cream min-h-screen">
         {/* Hero Section */}
-        <div className="bg-black text-white py-20">
+        <div className="bg-gold/10 text-black py-20 border-b border-gold/20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h1 className="font-serif text-5xl mb-4">Our Story</h1>
             <p className="text-xl text-gold">Everything Under the Sun Boutique</p>
@@ -20,26 +20,27 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-16">
             <div>
-              <h2 className="font-serif text-4xl text-black mb-6">Luxury Fashion Since Day One</h2>
+              <h2 className="font-serif text-4xl text-black mb-6">Everything Under the Sun</h2>
               <p className="text-gray-700 mb-4 leading-relaxed">
-                Everything Under the Sun Boutique was founded with a simple mission: to bring luxury, elegance, and
-                sophistication to Hazel Crest. We believe that every woman deserves to feel confident, beautiful, and
-                empowered.
+                Everything Under the Sun Boutique was founded with one simple mission: to be your one-stop shop
+                for quality fashion, accessories, and lifestyle products at prices that make sense. From clothing
+                to purses, shoes to home accessories—we have everything you need.
               </p>
               <p className="text-gray-700 mb-4 leading-relaxed">
-                Our carefully curated collection features premium dresses, designer shoes, luxury handbags, and
-                exquisite accessories from the finest brands. Each piece is hand-selected by our team of fashion experts
-                to ensure quality and style.
+                Our carefully curated collection features a diverse range of items for everyday wear, special occasions,
+                and everything in between. Whether you're looking for a new dress, the perfect handbag, comfortable
+                shoes, or lifestyle essentials, we've got you covered.
               </p>
               <p className="text-gray-700 leading-relaxed">
-                We're proud to serve our community and have become Hazel Crest's destination for luxury women's fashion.
-                Thank you for supporting us.
+                We're proud to be Hazel Crest's trusted destination for affordable, quality fashion and accessories.
+                Our team hand-selects every item to ensure it meets our standards for value and style. Thank you for
+                making us part of your community.
               </p>
             </div>
             <div className="bg-gray-200 rounded-lg h-96 overflow-hidden">
               <Image
-                src="/luxury-boutique-interior.jpg"
-                alt="Boutique Interior"
+                src="/products/p1.jpg"
+                alt="Boutique Collection"
                 width={400}
                 height={400}
                 className="w-full h-full object-cover"
@@ -49,20 +50,20 @@ export default function AboutPage() {
 
           {/* Values Section */}
           <div className="mb-16">
-            <h2 className="font-serif text-4xl text-black text-center mb-12">Our Values</h2>
+            <h2 className="font-serif text-4xl text-black text-center mb-12">Why Shop Everything Under the Sun</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {[
                 {
-                  title: "Quality",
-                  description: "We only offer the finest quality pieces from trusted designers.",
+                  title: "One-Stop Shop",
+                  description: "Clothing, purses, shoes, accessories, and lifestyle products all in one place.",
                 },
                 {
-                  title: "Elegance",
-                  description: "Every item is chosen for its timeless style and sophistication.",
+                  title: "Affordable Prices",
+                  description: "Quality fashion without the luxury price tag. We believe great style is for everyone.",
                 },
                 {
-                  title: "Service",
-                  description: "Your satisfaction is our priority. Exceptional service, always.",
+                  title: "Handpicked Selection",
+                  description: "Every item is carefully selected by our team for quality, style, and value.",
                 },
               ].map((value) => (
                 <div key={value.title} className="text-center">

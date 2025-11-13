@@ -48,7 +48,7 @@ export function ProductCard({ id, name, price, image, sale, salePrice, slug }: P
         {sale && <div className="absolute top-4 right-4 bg-gold text-black px-3 py-1 font-semibold text-sm">Sale</div>}
 
         {/* Hover Actions */}
-        <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+        <div className="absolute inset-0 bg-white/0 group-hover:bg-white/60 transition-colors flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
           <div className="space-y-3">
             <button
               onClick={handleAddToCart}
@@ -58,7 +58,7 @@ export function ProductCard({ id, name, price, image, sale, salePrice, slug }: P
             </button>
             <Link
               href={`/shop/${slug}`}
-              className="w-40 bg-black text-gold border border-gold py-3 font-semibold hover:bg-gold hover:text-black transition-colors block text-center"
+              className="w-40 bg-cream text-gold border border-gold py-3 font-semibold hover:bg-gold hover:text-black transition-colors block text-center"
             >
               View Details
             </Link>
