@@ -6,13 +6,13 @@ export default function ReturnsPage() {
     <>
       <Navbar />
 
-      <div className="bg-cream min-h-screen py-12">
+      <div className="bg-light-yellow min-h-screen py-12">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="font-serif text-5xl text-black mb-12">Returns & Exchanges</h1>
 
           <div className="space-y-8">
             {/* Return Policy */}
-            <div className="bg-white border border-gold/10 p-8">
+            <div className="bg-white border-2 border-gold p-8">
               <h2 className="font-serif text-2xl text-black mb-6">Return Policy</h2>
               <div className="space-y-4 text-gray-700">
                 <p>
@@ -31,7 +31,7 @@ export default function ReturnsPage() {
             </div>
 
             {/* How to Return */}
-            <div className="bg-white border border-gold/10 p-8">
+            <div className="bg-white border-2 border-gold p-8">
               <h2 className="font-serif text-2xl text-black mb-6">How to Return an Item</h2>
               <ol className="space-y-4 text-gray-700">
                 <li className="flex gap-4">
@@ -58,7 +58,7 @@ export default function ReturnsPage() {
             </div>
 
             {/* Exchanges */}
-            <div className="bg-white border border-gold/10 p-8">
+            <div className="bg-white border-2 border-gold p-8">
               <h2 className="font-serif text-2xl text-black mb-6">Exchanges</h2>
               <p className="text-gray-700 mb-4">
                 We offer free exchanges for different sizes or colors of the same item within 30 days of purchase.
@@ -71,7 +71,7 @@ export default function ReturnsPage() {
             </div>
 
             {/* Non-Returnable Items */}
-            <div className="bg-white border border-gold/10 p-8">
+            <div className="bg-white border-2 border-gold p-8">
               <h2 className="font-serif text-2xl text-black mb-6">Non-Returnable Items</h2>
               <ul className="space-y-2 text-gray-700">
                 <li>• Intimates (for hygiene reasons)</li>

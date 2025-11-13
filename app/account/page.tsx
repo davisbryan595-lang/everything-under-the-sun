@@ -8,13 +8,13 @@ export default function AccountPage() {
     <>
       <Navbar />
 
-      <div className="bg-cream min-h-screen py-12">
+      <div className="bg-light-yellow min-h-screen py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="font-serif text-4xl text-black mb-12">My Account</h1>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Account Info */}
-            <div className="bg-white border border-gold/10 p-8 text-center">
+            <div className="bg-white border-2 border-gold p-8 text-center">
               <User className="w-12 h-12 text-gold mx-auto mb-4" />
               <h2 className="font-serif text-2xl text-black mb-4">Profile</h2>
               <p className="text-gray-600 mb-6">Manage your profile information and settings</p>
@@ -26,7 +26,7 @@ export default function AccountPage() {
             {/* Orders */}
             <Link
               href="/account/orders"
-              className="bg-white border border-gold/10 p-8 text-center hover:border-gold/30 transition-colors"
+              className="bg-white border-2 border-gold p-8 text-center hover:border-gold transition-colors"
             >
               <ShoppingBag className="w-12 h-12 text-gold mx-auto mb-4" />
               <h2 className="font-serif text-2xl text-black mb-4">Orders</h2>
@@ -39,7 +39,7 @@ export default function AccountPage() {
             {/* Wishlist */}
             <Link
               href="/wishlist"
-              className="bg-white border border-gold/10 p-8 text-center hover:border-gold/30 transition-colors"
+              className="bg-white border-2 border-gold p-8 text-center hover:border-gold transition-colors"
             >
               <Heart className="w-12 h-12 text-gold mx-auto mb-4" />
               <h2 className="font-serif text-2xl text-black mb-4">Wishlist</h2>
@@ -51,7 +51,7 @@ export default function AccountPage() {
           </div>
 
           {/* Additional Links */}
-          <div className="mt-12 bg-white border border-gold/10 p-8">
+          <div className="mt-12 bg-white border-2 border-gold p-8">
             <h2 className="font-serif text-2xl text-black mb-6">Account Settings</h2>
             <ul className="space-y-4">
               <li>

@@ -53,7 +53,7 @@ export default function FAQPage() {
     <>
       <Navbar />
 
-      <div className="bg-cream min-h-screen py-12">
+      <div className="bg-light-yellow min-h-screen py-12">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h1 className="font-serif text-5xl text-black mb-4">Frequently Asked Questions</h1>
@@ -62,10 +62,10 @@ export default function FAQPage() {
 
           <div className="space-y-3">
             {faqs.map((faq, index) => (
-              <div key={index} className="bg-white border border-gold/10 overflow-hidden">
+              <div key={index} className="bg-white border-2 border-gold overflow-hidden">
                 <button
                   onClick={() => setExpandedIndex(expandedIndex === index ? null : index)}
-                  className="w-full px-6 py-4 flex items-center justify-between hover:bg-cream transition-colors"
+                  className="w-full px-6 py-4 flex items-center justify-between hover:bg-light-yellow transition-colors"
                 >
                   <h3 className="font-semibold text-black text-left">{faq.question}</h3>
                   <ChevronDown
@@ -76,14 +76,14 @@ export default function FAQPage() {
                 </button>
 
                 {expandedIndex === index && (
-                  <div className="px-6 py-4 border-t border-gold/10 bg-cream text-gray-700">{faq.answer}</div>
+                  <div className="px-6 py-4 border-t-2 border-gold bg-light-yellow text-gray-700">{faq.answer}</div>
                 )}
               </div>
             ))}
           </div>
 
           {/* Contact Section */}
-          <div className="mt-16 bg-white border border-gold/10 p-8 text-center">
+          <div className="mt-16 bg-white border-2 border-gold p-8 text-center">
             <h2 className="font-serif text-2xl text-black mb-4">Didn't find your answer?</h2>
             <p className="text-gray-600 mb-6">Contact our customer service team for personalized assistance.</p>
             <a

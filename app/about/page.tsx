@@ -7,7 +7,7 @@ export default function AboutPage() {
     <>
       <Navbar />
 
-      <div className="bg-cream min-h-screen">
+      <div className="bg-light-yellow min-h-screen">
         {/* Hero Section */}
         <div className="bg-gold/10 text-black py-20 border-b border-gold/20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -75,7 +75,7 @@ export default function AboutPage() {
           </div>
 
           {/* Contact Info */}
-          <div className="bg-white border border-gold/10 p-8 text-center">
+          <div className="bg-white border-2 border-gold p-8 text-center">
             <h2 className="font-serif text-2xl text-black mb-4">Visit Us Today</h2>
             <p className="text-lg text-gray-700 mb-2">1911 West 170th Street</p>
             <p className="text-lg text-gray-700 mb-2">Hazel Crest, IL 60429</p>

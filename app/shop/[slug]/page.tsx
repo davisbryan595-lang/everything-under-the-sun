@@ -250,7 +250,7 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
     <>
       <Navbar />
 
-      <div className="bg-cream min-h-screen py-12">
+      <div className="bg-light-yellow min-h-screen py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Breadcrumb */}
           <div className="mb-8 flex items-center gap-2 text-sm">
