@@ -20,7 +20,6 @@ const nextConfig = {
     ],
     unoptimized: true,
   },
-  reactCompiler: true,
 }
 
 export default nextConfig
