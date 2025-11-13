@@ -142,21 +142,21 @@ export function ProductDetailPanel({ product, onClose }: ProductDetailPanelProps
           <div className="space-y-3 pt-4">
             <button
               onClick={handleAddToCart}
-              className="w-full bg-black text-white py-4 font-semibold hover:bg-gold hover:text-black transition-colors flex items-center justify-center gap-2 rounded"
+              className="w-full bg-black text-white py-3 md:py-4 font-semibold text-sm md:text-base hover:bg-gold hover:text-black transition-colors flex items-center justify-center gap-2 rounded"
             >
-              <ShoppingCart className="w-5 h-5" />
+              <ShoppingCart className="w-4 md:w-5 h-4 md:h-5" />
               Add to Cart
             </button>
 
             <button
               onClick={handleWishlist}
-              className={`w-full py-3 font-semibold rounded border transition-colors flex items-center justify-center gap-2 ${
+              className={`w-full py-2 md:py-3 font-semibold rounded border transition-colors flex items-center justify-center gap-2 text-sm md:text-base ${
                 isWishlisted
                   ? 'bg-gold/10 border-gold text-gold'
                   : 'border-gold/20 text-black hover:border-gold'
               }`}
             >
-              <Heart className={`w-5 h-5 ${isWishlisted ? 'fill-current' : ''}`} />
+              <Heart className={`w-4 md:w-5 h-4 md:h-5 ${isWishlisted ? 'fill-current' : ''}`} />
               {isWishlisted ? 'Wishlisted' : 'Add to Wishlist'}
             </button>
           </div>
