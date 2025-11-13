@@ -14,7 +14,7 @@ const slides = [
   },
   {
     id: 2,
-    image: "https://images.pexels.com/photos/17244602/pexels-photo-17244602.jpeg",
+    image: "https://images.pexels.com/photos/1926769/pexels-photo-1926769.jpeg",
     title: "Style Without The Price",
     subtitle: "Quality fashion and lifestyle products at prices that fit your budget",
   },
