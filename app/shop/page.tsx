@@ -243,8 +243,8 @@ export default function ShopPage() {
       <div className="bg-cream">
         {/* Page Header */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <h1 className="font-serif text-5xl text-black mb-4">Shop</h1>
-          <p className="text-gray-600">Affordable fashion for everyday style</p>
+          <h1 className="font-serif text-5xl text-black mb-4">Shop Everything</h1>
+          <p className="text-gray-600">Clothing, purses, accessories, shoes, and more - all at affordable prices</p>
         </div>
 
         {/* Shop Grid */}
