@@ -379,7 +379,7 @@ export default function ProductPage({ params }: { params: Promise<{ slug: string
               <div className="space-y-3 mb-6">
                 <button
                   onClick={handleAddToCart}
-                  className="w-full bg-gold text-black py-4 font-semibold hover:bg-gold-dark transition-colors flex items-center justify-center gap-2"
+                  className="w-full bg-gold text-white py-4 font-semibold hover:text-white transition-colors flex items-center justify-center gap-2"
                 >
                   <ShoppingCart className="w-5 h-5" />
                   Add to Cart
