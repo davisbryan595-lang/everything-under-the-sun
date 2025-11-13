@@ -107,7 +107,7 @@ export default function Home() {
           <div className="text-center">
             <Link
               href="/shop"
-              className="inline-block bg-black text-white px-8 py-3 font-semibold hover:text-white transition-colors border-2 border-gold"
+              className="inline-block bg-black text-white px-8 py-3 font-semibold hover:text-white transition-colors border-2 border-gold btn-lift"
             >
               View All Products
             </Link>
@@ -165,7 +165,7 @@ export default function Home() {
             <div className="text-center">
               <Link
                 href="/shop?category=dresses"
-                className="inline-block bg-black text-white px-6 py-2 font-semibold hover:text-white transition-colors border-2 border-gold text-sm"
+                className="inline-block bg-black text-white px-6 py-2 font-semibold hover:text-white transition-colors border-2 border-gold text-sm btn-lift"
               >
                 View All Clothing
               </Link>
@@ -183,7 +183,7 @@ export default function Home() {
             <div className="text-center">
               <Link
                 href="/shop?category=purses"
-                className="inline-block bg-black text-white px-6 py-2 font-semibold hover:text-white transition-colors border-2 border-gold text-sm"
+                className="inline-block bg-black text-white px-6 py-2 font-semibold hover:text-white transition-colors border-2 border-gold text-sm btn-lift"
               >
                 View All Bags & Accessories
               </Link>
@@ -201,7 +201,7 @@ export default function Home() {
             <div className="text-center">
               <Link
                 href="/shop?category=shoes"
-                className="inline-block bg-black text-white px-6 py-2 font-semibold hover:text-white transition-colors border-2 border-gold text-sm"
+                className="inline-block bg-black text-white px-6 py-2 font-semibold hover:text-white transition-colors border-2 border-gold text-sm btn-lift"
               >
                 View All Footwear
               </Link>
