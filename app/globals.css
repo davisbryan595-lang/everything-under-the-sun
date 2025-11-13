@@ -296,25 +296,41 @@
   .preloader-text {
     text-align: center;
     color: var(--gold);
+    width: 100%;
+    max-width: 300px;
   }
 
   .preloader-title {
     font-family: var(--font-serif);
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     font-weight: 600;
     letter-spacing: 0.1em;
     margin: 0;
     animation: fadeInUp 0.8s ease-out 0.2s both;
+    word-wrap: break-word;
+  }
+
+  @media (min-width: 768px) {
+    .preloader-title {
+      font-size: 1.5rem;
+    }
   }
 
   .preloader-subtitle {
     font-family: var(--font-sans);
-    font-size: 0.875rem;
+    font-size: 0.75rem;
     font-weight: 300;
     letter-spacing: 0.05em;
     margin: 0.5rem 0 0 0;
     opacity: 0.8;
     animation: fadeInUp 0.8s ease-out 0.4s both;
+    word-wrap: break-word;
+  }
+
+  @media (min-width: 768px) {
+    .preloader-subtitle {
+      font-size: 0.875rem;
+    }
   }
 
   @keyframes fadeInUp {
