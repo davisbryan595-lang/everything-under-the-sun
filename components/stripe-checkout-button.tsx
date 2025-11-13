@@ -40,7 +40,7 @@ export function StripeCheckoutButton({ total, items, shipping }: StripeCheckoutB
     <button
       onClick={handleCheckout}
       disabled={isLoading}
-      className="w-full bg-gold text-black py-3 font-semibold hover:bg-gold-dark transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+      className="w-full bg-gold text-white py-3 font-semibold hover:text-white transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
     >
       {isLoading ? "Processing..." : "Complete Purchase with Stripe"}
     </button>
