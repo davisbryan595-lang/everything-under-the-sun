@@ -8,19 +8,19 @@ import { ChevronLeft, ChevronRight } from "lucide-react"
 const slides = [
   {
     id: 1,
-    image: "/products/p1.jpg",
+    image: "/hero-1.jpg",
     title: "Fresh Styles",
     subtitle: "Great prices on quality dresses for everyday wear",
   },
   {
     id: 2,
-    image: "/products/p2.jpg",
+    image: "/hero-2.jpg",
     title: "Everyday Fashion",
     subtitle: "Affordable pieces that work for any occasion",
   },
   {
     id: 3,
-    image: "/products/p3.jpg",
+    image: "/hero-3.jpg",
     title: "Look Good, Feel Great",
     subtitle: "Everything you need, under the sun",
   },
