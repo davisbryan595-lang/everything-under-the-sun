@@ -23,7 +23,7 @@ const faqs = [
   },
   {
     question: "Is shipping free?",
-    answer: "We offer free shipping on all orders over $100. Orders under $100 have a flat shipping rate of $10.",
+    answer: "We offer free shipping on all orders over $50. Orders under $50 have a flat shipping rate of $8.",
   },
   {
     question: "How do I track my order?",
