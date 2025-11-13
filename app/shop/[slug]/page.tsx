@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, use } from "react"
 import { useStore } from "@/lib/store"
 import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
@@ -216,8 +216,8 @@ const productDetails: Record<string, any> = {
   },
 }
 
-export default function ProductPage({ params }: { params: { slug: string } }) {
-  const { slug } = params
+export default function ProductPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = use(params)
   const product = productDetails[slug] || productDetails["black-casual-dress"]
 
   const [selectedSize, setSelectedSize] = useState("")
@@ -379,7 +379,7 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
               <div className="space-y-3 mb-6">
                 <button
                   onClick={handleAddToCart}
-                  className="w-full bg-gold text-black py-4 font-semibold hover:bg-gold-dark transition-colors flex items-center justify-center gap-2"
+                  className="w-full bg-gold text-white py-4 font-semibold hover:text-white transition-colors flex items-center justify-center gap-2 btn-lift"
                 >
                   <ShoppingCart className="w-5 h-5" />
                   Add to Cart

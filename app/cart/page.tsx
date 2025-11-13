@@ -27,7 +27,7 @@ export default function CartPage() {
             <p className="text-gray-600 mb-8">Your cart is currently empty</p>
             <Link
               href="/shop"
-              className="inline-block bg-gold text-black px-8 py-3 font-semibold hover:bg-gold-dark transition-colors"
+              className="inline-block bg-gold text-white px-8 py-3 font-semibold hover:text-white transition-colors btn-lift"
             >
               Continue Shopping
             </Link>
@@ -136,14 +136,14 @@ export default function CartPage() {
 
                 <Link
                   href="/checkout"
-                  className="w-full bg-gold text-black py-3 font-semibold hover:bg-gold-dark transition-colors block text-center mb-3"
+                  className="w-full bg-gold text-white py-3 font-semibold hover:text-white transition-colors block text-center mb-3 btn-lift inline-block"
                 >
                   Proceed to Checkout
                 </Link>
 
                 <Link
                   href="/shop"
-                  className="w-full border-2 border-gold text-black py-3 font-semibold hover:bg-gold hover:text-black transition-colors block text-center"
+                  className="w-full border-2 border-gold text-white bg-black py-3 font-semibold hover:text-white transition-colors block text-center btn-lift"
                 >
                   Continue Shopping
                 </Link>
@@ -159,7 +159,7 @@ export default function CartPage() {
                       placeholder="Enter code"
                       className="flex-grow px-3 py-2 border-2 border-gold bg-white text-black text-sm focus:border-gold outline-none"
                     />
-                    <button className="px-4 py-2 bg-black text-gold font-semibold hover:bg-gold hover:text-black transition-colors text-sm">
+                    <button className="px-4 py-2 bg-black text-white font-semibold hover:text-white transition-colors text-sm btn-lift">
                       Apply
                     </button>
                   </div>

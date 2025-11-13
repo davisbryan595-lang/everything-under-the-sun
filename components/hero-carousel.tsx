@@ -14,7 +14,7 @@ const slides = [
   },
   {
     id: 2,
-    image: "https://images.pexels.com/photos/17244602/pexels-photo-17244602.jpeg",
+    image: "https://images.pexels.com/photos/1926769/pexels-photo-1926769.jpeg",
     title: "Style Without The Price",
     subtitle: "Quality fashion and lifestyle products at prices that fit your budget",
   },
@@ -61,7 +61,7 @@ export function HeroCarousel() {
             <p className="text-lg md:text-xl mb-8 max-w-2xl fade-in">{slide.subtitle}</p>
             <Link
               href="/shop"
-              className="bg-gold text-black px-8 py-3 font-semibold hover:bg-gold-dark transition-colors slide-up"
+              className="bg-gold text-white px-8 py-3 font-semibold hover:text-white transition-colors slide-up btn-lift"
             >
               Shop Now
             </Link>

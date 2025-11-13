@@ -5,6 +5,7 @@ import { Preloader } from "@/components/preloader"
 import { HeroCarousel } from "@/components/hero-carousel"
 import { AnimatedCounters } from "@/components/animated-counters"
 import { ProductCard } from "@/components/product-card"
+import { Shirt, Footprints, ShoppingBag, Sparkles } from "lucide-react"
 
 const newArrivals = [
   {
@@ -70,10 +71,10 @@ const newArrivals = [
 ]
 
 const categories = [
-  { name: "Clothing", href: "/shop?category=dresses" },
-  { name: "Footwear", href: "/shop?category=shoes" },
-  { name: "Bags & Purses", href: "/shop?category=purses" },
-  { name: "Accessories & More", href: "/shop?category=accessories" },
+  { name: "Clothing", href: "/shop?category=dresses", icon: Shirt },
+  { name: "Footwear", href: "/shop?category=shoes", icon: Footprints },
+  { name: "Bags & Purses", href: "/shop?category=purses", icon: ShoppingBag },
+  { name: "Accessories & More", href: "/shop?category=accessories", icon: Sparkles },
 ]
 
 export default function Home() {
@@ -106,7 +107,7 @@ export default function Home() {
           <div className="text-center">
             <Link
               href="/shop"
-              className="inline-block bg-black text-white px-8 py-3 font-semibold hover:bg-gold hover:text-black transition-colors border-2 border-gold"
+              className="inline-block bg-black text-white px-8 py-3 font-semibold hover:text-white transition-colors border-2 border-gold btn-lift"
             >
               View All Products
             </Link>
@@ -122,18 +123,24 @@ export default function Home() {
             <div className="w-24 h-1 bg-gold mx-auto"></div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {categories.map((category) => (
-              <Link
-                key={category.name}
-                href={category.href}
-                className="group relative overflow-hidden h-64 flex items-center justify-center bg-gray-100 hover:bg-gray-200 transition-colors border-2 border-gold"
-              >
-                <div className="absolute inset-0 bg-gold/10 group-hover:bg-gold/20 transition-colors" />
-                <h3 className="font-serif text-3xl text-black group-hover:text-gold transition-colors relative z-10">
-                  {category.name}
-                </h3>
-              </Link>
-            ))}
+            {categories.map((category) => {
+              const IconComponent = category.icon
+              return (
+                <Link
+                  key={category.name}
+                  href={category.href}
+                  className="group relative overflow-hidden h-64 flex flex-col items-center justify-center bg-gray-100 hover:bg-gray-200 transition-colors border-2 border-gold"
+                >
+                  <div className="absolute inset-0 bg-gold/10 group-hover:bg-gold/20 transition-colors" />
+                  <div className="relative z-10 flex flex-col items-center gap-4">
+                    <IconComponent className="w-16 h-16 text-gold group-hover:text-gold-dark transition-colors" />
+                    <h3 className="font-serif text-3xl text-black group-hover:text-gold transition-colors text-center">
+                      {category.name}
+                    </h3>
+                  </div>
+                </Link>
+              )
+            })}
           </div>
         </div>
       </section>
@@ -151,14 +158,14 @@ export default function Home() {
           <div className="mb-16">
             <h3 className="font-serif text-2xl md:text-3xl text-black mb-6">Clothing</h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
-              <ProductCard {...newArrivals[0]} />
-              <ProductCard {...newArrivals[1]} />
-              <ProductCard {...newArrivals[5]} />
+              <div key="clothing-0"><ProductCard {...newArrivals[0]} /></div>
+              <div key="clothing-1"><ProductCard {...newArrivals[1]} /></div>
+              <div key="clothing-5"><ProductCard {...newArrivals[5]} /></div>
             </div>
             <div className="text-center">
               <Link
                 href="/shop?category=dresses"
-                className="inline-block bg-black text-white px-6 py-2 font-semibold hover:bg-gold hover:text-black transition-colors border-2 border-gold text-sm"
+                className="inline-block bg-black text-white px-6 py-2 font-semibold hover:text-white transition-colors border-2 border-gold text-sm btn-lift"
               >
                 View All Clothing
               </Link>
@@ -169,14 +176,14 @@ export default function Home() {
           <div className="mb-16">
             <h3 className="font-serif text-2xl md:text-3xl text-black mb-6">Bags & Accessories</h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
-              <ProductCard {...newArrivals[2]} />
-              <ProductCard {...newArrivals[6]} />
-              <ProductCard {...newArrivals[7]} />
+              <div key="bags-2"><ProductCard {...newArrivals[2]} /></div>
+              <div key="bags-6"><ProductCard {...newArrivals[6]} /></div>
+              <div key="bags-7"><ProductCard {...newArrivals[7]} /></div>
             </div>
             <div className="text-center">
               <Link
                 href="/shop?category=purses"
-                className="inline-block bg-black text-white px-6 py-2 font-semibold hover:bg-gold hover:text-black transition-colors border-2 border-gold text-sm"
+                className="inline-block bg-black text-white px-6 py-2 font-semibold hover:text-white transition-colors border-2 border-gold text-sm btn-lift"
               >
                 View All Bags & Accessories
               </Link>
@@ -187,14 +194,14 @@ export default function Home() {
           <div>
             <h3 className="font-serif text-2xl md:text-3xl text-black mb-6">Footwear</h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
-              <ProductCard {...newArrivals[3]} />
-              <ProductCard {...newArrivals[4]} />
-              <ProductCard {...newArrivals[0]} />
+              <div key="footwear-3"><ProductCard {...newArrivals[3]} /></div>
+              <div key="footwear-4"><ProductCard {...newArrivals[4]} /></div>
+              <div key="footwear-0"><ProductCard {...newArrivals[0]} /></div>
             </div>
             <div className="text-center">
               <Link
                 href="/shop?category=shoes"
-                className="inline-block bg-black text-white px-6 py-2 font-semibold hover:bg-gold hover:text-black transition-colors border-2 border-gold text-sm"
+                className="inline-block bg-black text-white px-6 py-2 font-semibold hover:text-white transition-colors border-2 border-gold text-sm btn-lift"
               >
                 View All Footwear
               </Link>
