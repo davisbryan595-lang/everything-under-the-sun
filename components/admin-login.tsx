@@ -25,8 +25,8 @@ export function AdminLogin({ onLogin }: AdminLoginProps) {
   }
 
   return (
-    <div className="bg-cream min-h-screen flex items-center justify-center py-12 px-4">
-      <div className="bg-white border border-gold/10 p-8 max-w-md w-full">
+    <div className="bg-light-yellow min-h-screen flex items-center justify-center py-12 px-4">
+      <div className="bg-white border-2 border-gold p-8 max-w-md w-full">
         <h1 className="font-serif text-3xl text-black text-center mb-8">Admin Login</h1>
 
         <form onSubmit={handleSubmit} className="space-y-6">
@@ -37,7 +37,7 @@ export function AdminLogin({ onLogin }: AdminLoginProps) {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               placeholder="Enter admin password"
-              className="w-full px-4 py-2 border border-gold/20 bg-white text-black placeholder-gray-500 focus:border-gold outline-none"
+              className="w-full px-4 py-2 border-2 border-gold bg-white text-black placeholder-gray-500 focus:border-gold outline-none"
             />
           </div>
 
