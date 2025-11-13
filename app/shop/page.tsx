@@ -7,10 +7,10 @@ import { ProductCard } from "@/components/product-card"
 import { FilterSidebar, type FilterState } from "@/components/filter-sidebar"
 
 const allProducts = [
-  // Dresses
+  // Clothing
   {
     id: "1",
-    name: "Black Casual Dress",
+    name: "Classic Black Dress",
     category: "Dresses",
     price: 49,
     salePrice: 39,
@@ -22,7 +22,7 @@ const allProducts = [
   },
   {
     id: "2",
-    name: "White Cotton Dress",
+    name: "White Linen Top",
     category: "Dresses",
     price: 39,
     image: "/products/p2.jpg",
@@ -32,7 +32,7 @@ const allProducts = [
   },
   {
     id: "3",
-    name: "Printed Summer Dress",
+    name: "Colorful Printed Blouse",
     category: "Dresses",
     price: 45,
     image: "/products/p3.jpg",
@@ -42,10 +42,10 @@ const allProducts = [
   },
   {
     id: "4",
-    name: "Denim Shift Dress",
+    name: "Denim Jacket",
     category: "Dresses",
-    price: 55,
-    salePrice: 42,
+    price: 65,
+    salePrice: 49,
     sale: true,
     image: "/products/p4.jpg",
     slug: "denim-shift-dress",
@@ -54,7 +54,7 @@ const allProducts = [
   },
   {
     id: "5",
-    name: "Pink Everyday Dress",
+    name: "Pink Casual Sweater",
     category: "Dresses",
     price: 42,
     image: "/products/p1.jpg",
@@ -62,10 +62,10 @@ const allProducts = [
     sizes: ["S", "M", "L", "XL", "2X"],
     colors: ["Pink"],
   },
-  // Shoes
+  // Footwear
   {
     id: "6",
-    name: "Black Casual Flats",
+    name: "Black Flats",
     category: "Shoes",
     price: 35,
     image: "/products/p2.jpg",
@@ -75,7 +75,7 @@ const allProducts = [
   },
   {
     id: "7",
-    name: "Comfy Walking Sandals",
+    name: "Tan Sandals",
     category: "Shoes",
     price: 32,
     salePrice: 22,
@@ -87,7 +87,7 @@ const allProducts = [
   },
   {
     id: "8",
-    name: "White Sneakers",
+    name: "White Canvas Sneakers",
     category: "Shoes",
     price: 45,
     image: "https://images.pexels.com/photos/1464625/pexels-photo-1464625.jpeg",
@@ -95,10 +95,10 @@ const allProducts = [
     sizes: ["S", "M", "L", "XL"],
     colors: ["White"],
   },
-  // Purses
+  // Bags & Purses
   {
     id: "9",
-    name: "Black Leather Handbag",
+    name: "Black Leather Tote",
     category: "Purses",
     price: 65,
     image: "https://images.pexels.com/photos/27035625/pexels-photo-27035625.jpeg",
@@ -108,7 +108,7 @@ const allProducts = [
   },
   {
     id: "10",
-    name: "Canvas Crossbody Bag",
+    name: "Tan Crossbody Bag",
     category: "Purses",
     price: 42,
     salePrice: 32,
@@ -120,7 +120,7 @@ const allProducts = [
   },
   {
     id: "11",
-    name: "Neutral Tote Bag",
+    name: "Beige Shoulder Bag",
     category: "Purses",
     price: 48,
     image: "/products/p3.jpg",
@@ -128,10 +128,10 @@ const allProducts = [
     sizes: ["M"],
     colors: ["Beige"],
   },
-  // Accessories
+  // Accessories & More
   {
     id: "12",
-    name: "Coffee Tumbler",
+    name: "Ceramic Coffee Mug",
     category: "Accessories",
     price: 18,
     salePrice: 12,
@@ -143,7 +143,7 @@ const allProducts = [
   },
   {
     id: "13",
-    name: "Basic Pendant Necklace",
+    name: "Silver Pendant Necklace",
     category: "Accessories",
     price: 18,
     salePrice: 12,
@@ -155,7 +155,7 @@ const allProducts = [
   },
   {
     id: "14",
-    name: "Casual Canvas Belt",
+    name: "Canvas Web Belt",
     category: "Accessories",
     price: 22,
     image: "/products/p2.jpg",
@@ -165,7 +165,7 @@ const allProducts = [
   },
   {
     id: "15",
-    name: "Cotton Print Scarf",
+    name: "Printed Cotton Scarf",
     category: "Accessories",
     price: 16,
     image: "/products/p3.jpg",
@@ -175,7 +175,7 @@ const allProducts = [
   },
   {
     id: "16",
-    name: "Everyday Ring Set",
+    name: "Sterling Silver Ring Set",
     category: "Accessories",
     price: 19,
     image: "/products/p4.jpg",
