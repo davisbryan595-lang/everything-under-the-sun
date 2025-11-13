@@ -8,7 +8,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react"
 const slides = [
   {
     id: 1,
-    image: "https://images.pexels.com/photos/7159432/pexels-photo-7159432.jpeg",
+    image: "https://images.pexels.com/photos/3945683/pexels-photo-3945683.jpeg",
     title: "Everything You Need",
     subtitle: "Clothing, purses, accessories, and more - all in one place",
   },
@@ -61,7 +61,7 @@ export function HeroCarousel() {
             <p className="text-lg md:text-xl mb-8 max-w-2xl fade-in">{slide.subtitle}</p>
             <Link
               href="/shop"
-              className="bg-gold text-black px-8 py-3 font-semibold hover:bg-gold-dark transition-colors slide-up"
+              className="bg-gold text-white px-8 py-3 font-semibold hover:bg-gold hover:text-white transition-colors slide-up"
             >
               Shop Now
             </Link>
