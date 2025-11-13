@@ -18,7 +18,7 @@ export default function AccountPage() {
               <User className="w-12 h-12 text-gold mx-auto mb-4" />
               <h2 className="font-serif text-2xl text-black mb-4">Profile</h2>
               <p className="text-gray-600 mb-6">Manage your profile information and settings</p>
-              <button className="w-full bg-gold text-black py-2 font-semibold hover:bg-gold-dark transition-colors">
+              <button className="w-full bg-gold text-white py-2 font-semibold hover:text-white transition-colors">
                 Edit Profile
               </button>
             </div>
