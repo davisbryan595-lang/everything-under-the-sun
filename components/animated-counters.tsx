@@ -9,8 +9,8 @@ interface Counter {
 
 const counters: Counter[] = [
   { label: "Products", value: "500+" },
-  { label: "Free Shipping", value: "Over $50" },
-  { label: "Happy", value: "Customers" },
+  { label: "Free Shipping", value: "Orders Over $50" },
+  { label: "Items", value: "Everything!" },
 ]
 
 export function AnimatedCounters() {
