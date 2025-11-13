@@ -5,7 +5,7 @@ import { Preloader } from "@/components/preloader"
 import { HeroCarousel } from "@/components/hero-carousel"
 import { AnimatedCounters } from "@/components/animated-counters"
 import { ProductCard } from "@/components/product-card"
-import { Shirt, Shoe, ShoppingBag, Sparkles } from "lucide-react"
+import { Shirt, Footprints, ShoppingBag, Sparkles } from "lucide-react"
 
 const newArrivals = [
   {
@@ -72,7 +72,7 @@ const newArrivals = [
 
 const categories = [
   { name: "Clothing", href: "/shop?category=dresses", icon: Shirt },
-  { name: "Footwear", href: "/shop?category=shoes", icon: Shoe },
+  { name: "Footwear", href: "/shop?category=shoes", icon: Footprints },
   { name: "Bags & Purses", href: "/shop?category=purses", icon: ShoppingBag },
   { name: "Accessories & More", href: "/shop?category=accessories", icon: Sparkles },
 ]
