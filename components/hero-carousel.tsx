@@ -61,7 +61,7 @@ export function HeroCarousel() {
             <p className="text-lg md:text-xl mb-8 max-w-2xl fade-in">{slide.subtitle}</p>
             <Link
               href="/shop"
-              className="bg-gold text-white px-8 py-3 font-semibold hover:text-white transition-colors slide-up"
+              className="bg-gold text-white px-8 py-3 font-semibold hover:text-white transition-colors slide-up btn-lift"
             >
               Shop Now
             </Link>
