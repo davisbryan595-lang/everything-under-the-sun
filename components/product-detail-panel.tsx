@@ -59,10 +59,10 @@ export function ProductDetailPanel({ product, onClose }: ProductDetailPanelProps
       />
 
       {/* Side Panel */}
-      <div className="fixed right-0 top-0 h-full w-full max-w-md bg-white shadow-2xl z-50 overflow-y-auto transition-transform">
+      <div className="fixed inset-0 md:inset-auto md:right-0 md:top-0 md:h-full md:w-full md:max-w-md bg-white shadow-2xl z-50 overflow-y-auto transition-transform rounded-t-2xl md:rounded-none">
         {/* Header */}
-        <div className="sticky top-0 bg-white border-b border-gold/10 p-6 flex items-center justify-between">
-          <h2 className="font-serif text-2xl text-black">Product Details</h2>
+        <div className="sticky top-0 bg-white border-b border-gold/10 p-4 md:p-6 flex items-center justify-between rounded-t-2xl md:rounded-none">
+          <h2 className="font-serif text-xl md:text-2xl text-black">Product Details</h2>
           <button
             onClick={onClose}
             className="p-2 hover:bg-gray-100 rounded-full transition-colors"
@@ -72,7 +72,7 @@ export function ProductDetailPanel({ product, onClose }: ProductDetailPanelProps
         </div>
 
         {/* Content */}
-        <div className="p-6 space-y-6">
+        <div className="p-4 md:p-6 space-y-6">
           {/* Image */}
           <div className="relative h-80 rounded-lg overflow-hidden bg-gray-100">
             <Image
