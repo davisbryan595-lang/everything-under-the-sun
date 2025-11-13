@@ -158,9 +158,9 @@ export default function Home() {
           <div className="mb-16">
             <h3 className="font-serif text-2xl md:text-3xl text-black mb-6">Clothing</h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
-              <ProductCard {...newArrivals[0]} />
-              <ProductCard {...newArrivals[1]} />
-              <ProductCard {...newArrivals[5]} />
+              <div key="clothing-0"><ProductCard {...newArrivals[0]} /></div>
+              <div key="clothing-1"><ProductCard {...newArrivals[1]} /></div>
+              <div key="clothing-5"><ProductCard {...newArrivals[5]} /></div>
             </div>
             <div className="text-center">
               <Link
@@ -176,9 +176,9 @@ export default function Home() {
           <div className="mb-16">
             <h3 className="font-serif text-2xl md:text-3xl text-black mb-6">Bags & Accessories</h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
-              <ProductCard {...newArrivals[2]} />
-              <ProductCard {...newArrivals[6]} />
-              <ProductCard {...newArrivals[7]} />
+              <div key="bags-2"><ProductCard {...newArrivals[2]} /></div>
+              <div key="bags-6"><ProductCard {...newArrivals[6]} /></div>
+              <div key="bags-7"><ProductCard {...newArrivals[7]} /></div>
             </div>
             <div className="text-center">
               <Link
@@ -194,9 +194,9 @@ export default function Home() {
           <div>
             <h3 className="font-serif text-2xl md:text-3xl text-black mb-6">Footwear</h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
-              <ProductCard {...newArrivals[3]} />
-              <ProductCard {...newArrivals[4]} />
-              <ProductCard {...newArrivals[0]} />
+              <div key="footwear-3"><ProductCard {...newArrivals[3]} /></div>
+              <div key="footwear-4"><ProductCard {...newArrivals[4]} /></div>
+              <div key="footwear-0"><ProductCard {...newArrivals[0]} /></div>
             </div>
             <div className="text-center">
               <Link
