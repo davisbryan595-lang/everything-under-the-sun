@@ -27,7 +27,7 @@ export default function CartPage() {
             <p className="text-gray-600 mb-8">Your cart is currently empty</p>
             <Link
               href="/shop"
-              className="inline-block bg-gold text-black px-8 py-3 font-semibold hover:bg-gold-dark transition-colors"
+              className="inline-block bg-gold text-white px-8 py-3 font-semibold hover:text-white transition-colors"
             >
               Continue Shopping
             </Link>
