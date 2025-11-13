@@ -209,7 +209,7 @@ export default function AdminPage() {
                   <button
                     type="button"
                     onClick={() => setShowProductForm(false)}
-                    className="border-2 border-gold text-black px-6 py-2 font-semibold hover:bg-gold hover:text-black transition-colors"
+                    className="border-2 border-gold text-white bg-black px-6 py-2 font-semibold hover:text-white transition-colors"
                   >
                     Cancel
                   </button>
