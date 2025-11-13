@@ -20,20 +20,21 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-16">
             <div>
-              <h2 className="font-serif text-4xl text-black mb-6">Great Style, Fair Prices</h2>
+              <h2 className="font-serif text-4xl text-black mb-6">Everything Under the Sun</h2>
               <p className="text-gray-700 mb-4 leading-relaxed">
-                Everything Under the Sun Boutique was founded with a simple mission: to make quality fashion
-                accessible and affordable for everyone. We believe that every woman deserves to look and feel great
-                without breaking the bank.
+                Everything Under the Sun Boutique was founded with one simple mission: to be your one-stop shop
+                for quality fashion, accessories, and lifestyle products at prices that make sense. From clothing
+                to purses, shoes to home accessories—we have everything you need.
               </p>
               <p className="text-gray-700 mb-4 leading-relaxed">
-                Our collection features affordable dresses, shoes, bags, and accessories that are
-                practical for everyday wear. Each piece is selected by our team for comfort, durability,
-                and value.
+                Our carefully curated collection features a diverse range of items for everyday wear, special occasions,
+                and everything in between. Whether you're looking for a new dress, the perfect handbag, comfortable
+                shoes, or lifestyle essentials, we've got you covered.
               </p>
               <p className="text-gray-700 leading-relaxed">
-                We're proud to serve our community and have become Hazel Crest's go-to shop for stylish,
-                affordable women's fashion. Thank you for supporting us.
+                We're proud to be Hazel Crest's trusted destination for affordable, quality fashion and accessories.
+                Our team hand-selects every item to ensure it meets our standards for value and style. Thank you for
+                making us part of your community.
               </p>
             </div>
             <div className="bg-gray-200 rounded-lg h-96 overflow-hidden">
@@ -49,20 +50,20 @@ export default function AboutPage() {
 
           {/* Values Section */}
           <div className="mb-16">
-            <h2 className="font-serif text-4xl text-black text-center mb-12">Why Shop With Us</h2>
+            <h2 className="font-serif text-4xl text-black text-center mb-12">Why Shop Everything Under the Sun</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {[
                 {
-                  title: "Affordable",
-                  description: "Great quality pieces at prices that work for your budget.",
+                  title: "One-Stop Shop",
+                  description: "Clothing, purses, shoes, accessories, and lifestyle products all in one place.",
                 },
                 {
-                  title: "Practical",
-                  description: "Fashion designed for real life and everyday wear.",
+                  title: "Affordable Prices",
+                  description: "Quality fashion without the luxury price tag. We believe great style is for everyone.",
                 },
                 {
-                  title: "Friendly",
-                  description: "Helpful service and a welcoming shopping experience.",
+                  title: "Handpicked Selection",
+                  description: "Every item is carefully selected by our team for quality, style, and value.",
                 },
               ].map((value) => (
                 <div key={value.title} className="text-center">
