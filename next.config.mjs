@@ -20,6 +20,9 @@ const nextConfig = {
     ],
     unoptimized: true,
   },
+  // Optimized for Vercel deployment
+  poweredByHeader: false,
+  compress: true,
 }
 
 export default nextConfig

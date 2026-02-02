@@ -8,6 +8,7 @@ import Link from "next/link"
 import { Trash2 } from "lucide-react"
 import { useState } from "react"
 
+// Shopping cart with free shipping progress tracker and optimized checkout flow
 export default function CartPage() {
   const { cart, removeFromCart, updateCartQuantity } = useStore()
   const [promoCode, setPromoCode] = useState("")
@@ -16,6 +17,8 @@ export default function CartPage() {
   const shipping = subtotal >= 100 ? 0 : 10
   const tax = Math.round(subtotal * 0.08 * 100) / 100
   const total = subtotal + shipping + tax
+  const freeShippingThreshold = 100
+  const progressToFreeShipping = Math.min((subtotal / freeShippingThreshold) * 100, 100)
 
   if (cart.length === 0) {
     return (
@@ -49,6 +52,25 @@ export default function CartPage() {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {/* Cart Items */}
             <div className="lg:col-span-2 space-y-4">
+              {/* Free Shipping Progress */}
+              {subtotal < freeShippingThreshold && (
+                <div className="bg-gradient-to-r from-white to-light-yellow border-2 border-gold p-5 shadow-sm">
+                  <div className="flex justify-between items-center text-sm mb-3">
+                    <span className="text-gray-800 font-semibold">
+                      {progressToFreeShipping >= 100
+                        ? "🎉 You've unlocked free shipping!"
+                        : `🚚 Add $${(freeShippingThreshold - subtotal).toFixed(2)} more for FREE shipping!`}
+                    </span>
+                    <span className="text-gold font-bold text-base">${subtotal.toFixed(2)} / $100</span>
+                  </div>
+                  <div className="w-full bg-gray-200 h-3 overflow-hidden border border-gray-300">
+                    <div
+                      className="bg-gradient-to-r from-gold to-yellow-500 h-full transition-all duration-500 ease-out"
+                      style={{ width: `${progressToFreeShipping}%` }}
+                    />
+                  </div>
+                </div>
+              )}
               {cart.map((item) => (
                 <div key={item.id} className="bg-white border-2 border-gold p-4 flex gap-4">
                   <div className="w-24 h-24 flex-shrink-0 bg-gray-100 overflow-hidden">
