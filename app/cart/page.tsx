@@ -8,6 +8,7 @@ import Link from "next/link"
 import { Trash2 } from "lucide-react"
 import { useState } from "react"
 
+// Shopping cart with free shipping progress tracker
 export default function CartPage() {
   const { cart, removeFromCart, updateCartQuantity } = useStore()
   const [promoCode, setPromoCode] = useState("")
