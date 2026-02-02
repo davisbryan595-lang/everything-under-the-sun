@@ -51,6 +51,25 @@ export default function CartPage() {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {/* Cart Items */}
             <div className="lg:col-span-2 space-y-4">
+              {/* Free Shipping Progress */}
+              {subtotal < freeShippingThreshold && (
+                <div className="bg-white border-2 border-gold p-4">
+                  <div className="flex justify-between text-sm mb-2">
+                    <span className="text-gray-700 font-medium">
+                      {progressToFreeShipping >= 100
+                        ? "🎉 You've unlocked free shipping!"
+                        : `Add $${(freeShippingThreshold - subtotal).toFixed(2)} more for free shipping`}
+                    </span>
+                    <span className="text-gold font-semibold">${subtotal.toFixed(2)} / $100</span>
+                  </div>
+                  <div className="w-full bg-gray-200 h-2 overflow-hidden">
+                    <div
+                      className="bg-gold h-full transition-all duration-300"
+                      style={{ width: `${progressToFreeShipping}%` }}
+                    />
+                  </div>
+                </div>
+              )}
               {cart.map((item) => (
                 <div key={item.id} className="bg-white border-2 border-gold p-4 flex gap-4">
                   <div className="w-24 h-24 flex-shrink-0 bg-gray-100 overflow-hidden">
