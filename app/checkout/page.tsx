@@ -183,7 +183,7 @@ export default function CheckoutPage() {
                     <span>Shipping</span>
                     <span>
                       {shipping === 0 ? (
-                        <span className="text-gold font-semibold">Free</span>
+                        <span className="text-gold-foreground font-semibold">Free</span>
                       ) : (
                         `$${shipping.toFixed(2)}`
                       )}
