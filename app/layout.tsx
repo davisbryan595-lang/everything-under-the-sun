@@ -19,6 +19,7 @@ const poppins = Poppins({
 })
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://everythingunderthesun.com"),
   title: "Everything Under the Sun Boutique | Luxury Women's Fashion",
   description:
     "Discover luxury women's fashion at Everything Under the Sun Boutique in Hazel Crest, IL. Premium dresses, shoes, purses & accessories.",
@@ -38,20 +39,7 @@ export const metadata: Metadata = {
     ],
   },
   icons: {
-    icon: [
-      {
-        url: "/icon-light-32x32.png",
-        media: "(prefers-color-scheme: light)",
-      },
-      {
-        url: "/icon-dark-32x32.png",
-        media: "(prefers-color-scheme: dark)",
-      },
-      {
-        url: "/icon.svg",
-        type: "image/svg+xml",
-      },
-    ],
+    icon: "/icon.svg",
     apple: "/apple-icon.png",
   },
 }
@@ -63,8 +51,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <head>
+      <body className={`${poppins.variable} ${playfairDisplay.variable} font-sans antialiased bg-cream text-black`}>
         <script
+          key="no-dark-mode"
           dangerouslySetInnerHTML={{
             __html: `
               try {
@@ -73,8 +62,6 @@ export default function RootLayout({
             `,
           }}
         />
-      </head>
-      <body className={`${poppins.variable} ${playfairDisplay.variable} font-sans antialiased bg-cream text-black`}>
         <Preloader />
         {children}
         <Analytics />

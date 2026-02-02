@@ -1,7 +1,6 @@
 "use client"
 
 import { useState } from "react"
-import { getStripe } from "@/lib/stripe-utils"
 
 interface StripeCheckoutButtonProps {
   total: number
@@ -24,18 +23,8 @@ export function StripeCheckoutButton({ total, items, shipping }: StripeCheckoutB
 
       const data = await response.json()
 
-      if (data.sessionId) {
-        const stripe = await getStripe()
-        if (stripe) {
-          const { error } = await stripe.redirectToCheckout({
-            sessionId: data.sessionId,
-          })
-
-          if (error) {
-            console.error("Stripe redirect error:", error)
-            alert(error.message)
-          }
-        }
+      if (data.url) {
+        window.location.href = data.url
       } else {
         alert(data.error || "Failed to initiate checkout")
       }

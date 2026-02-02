@@ -1,5 +1,5 @@
 import { type NextRequest, NextResponse } from "next/server"
-import { stripe } from "@/lib/stripe-utils"
+import { stripe } from "@/lib/stripe"
 
 export async function POST(request: NextRequest) {
   try {
@@ -30,6 +30,7 @@ export async function POST(request: NextRequest) {
 
     return NextResponse.json({
       sessionId: session.id,
+      url: session.url,
     })
   } catch (error: any) {
     console.error("Checkout error:", error)
