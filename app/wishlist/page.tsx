@@ -65,7 +65,7 @@ export default function WishlistPage() {
 
                 <div className="p-4">
                   <h3 className="font-serif text-lg text-black mb-2 line-clamp-2">{item.name}</h3>
-                  <p className="text-lg font-semibold text-gold mb-4">${item.price}</p>
+                  <p className="text-lg font-semibold text-gold-foreground mb-4">${item.price}</p>
 
                   <div className="space-y-3">
                     <button
