@@ -50,7 +50,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <head>
+      <body className={`${poppins.variable} ${playfairDisplay.variable} font-sans antialiased bg-cream text-black`}>
         <script
           dangerouslySetInnerHTML={{
             __html: `
@@ -60,8 +60,6 @@ export default function RootLayout({
             `,
           }}
         />
-      </head>
-      <body className={`${poppins.variable} ${playfairDisplay.variable} font-sans antialiased bg-cream text-black`}>
         <Preloader />
         {children}
         <Analytics />
