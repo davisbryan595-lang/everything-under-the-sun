@@ -212,10 +212,8 @@ export default function CheckoutPage() {
                 </div>
 
                 <div className="bg-light-yellow p-4 text-sm text-gray-600">
-                  <p className="mb-2 font-semibold text-black">Test Card Details:</p>
-                  <p>Card: 4242 4242 4242 4242</p>
-                  <p>Any future expiry date</p>
-                  <p>Any 3-digit CVC</p>
+                  <p className="mb-2 font-semibold text-black">Secure Checkout:</p>
+                  <p>Your payment information is processed securely by Stripe. We do not store your card details.</p>
                 </div>
               </div>
             </div>
