@@ -33,6 +33,7 @@
   --radius: 0.25rem;
   --gold: oklch(0.8 0.15 60);
   --gold-dark: oklch(0.7 0.12 55);
+  --gold-foreground: oklch(0.45 0.1 50);
   --black: oklch(0.1 0 0);
   --cream: oklch(0.96 0.08 70);
   --light-yellow: oklch(0.96 0.08 70);
@@ -110,6 +111,7 @@
   --color-chart-4: var(--chart-4);
   --color-chart-5: var(--chart-5);
   --color-light-yellow: var(--light-yellow);
+  --color-gold-foreground: var(--gold-foreground);
   --radius-sm: calc(var(--radius));
   --radius-md: calc(var(--radius) + 2px);
   --radius-lg: calc(var(--radius) + 4px);
@@ -302,7 +304,7 @@
 
   .preloader-text {
     text-align: center;
-    color: var(--gold);
+    color: var(--gold-foreground);
   }
 
   .preloader-title {

@@ -34,7 +34,7 @@ export default function WishlistPage() {
             <p className="text-gray-600 mb-8">Your wishlist is empty</p>
             <Link
               href="/shop"
-              className="inline-block bg-gold text-white px-8 py-3 font-semibold hover:text-white transition-colors btn-lift"
+              className="inline-block bg-gold text-black px-8 py-3 font-semibold hover:text-black transition-colors btn-lift"
             >
               Start Shopping
             </Link>
@@ -65,12 +65,12 @@ export default function WishlistPage() {
 
                 <div className="p-4">
                   <h3 className="font-serif text-lg text-black mb-2 line-clamp-2">{item.name}</h3>
-                  <p className="text-lg font-semibold text-gold mb-4">${item.price}</p>
+                  <p className="text-lg font-semibold text-gold-foreground mb-4">${item.price}</p>
 
                   <div className="space-y-3">
                     <button
                       onClick={() => handleAddToCart(item)}
-                      className="w-full bg-gold text-white py-2 font-semibold hover:text-white transition-colors flex items-center justify-center gap-2 btn-lift"
+                      className="w-full bg-gold text-black py-2 font-semibold hover:text-black transition-colors flex items-center justify-center gap-2 btn-lift"
                     >
                       <ShoppingCart className="w-4 h-4" />
                       Add to Cart

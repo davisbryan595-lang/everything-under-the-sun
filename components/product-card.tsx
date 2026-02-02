@@ -52,7 +52,7 @@ export function ProductCard({ id, name, price, image, sale, salePrice, slug }: P
           <div className="space-y-3">
             <button
               onClick={handleAddToCart}
-              className="w-40 bg-gold text-white py-3 font-semibold hover:text-white transition-colors btn-lift"
+              className="w-40 bg-gold text-black py-3 font-semibold hover:text-black transition-colors btn-lift"
             >
               Quick Add
             </button>
@@ -80,7 +80,7 @@ export function ProductCard({ id, name, price, image, sale, salePrice, slug }: P
         <div className="flex items-center gap-2">
           {sale ? (
             <>
-              <span className="text-lg font-semibold text-gold">${salePrice}</span>
+              <span className="text-lg font-semibold text-gold-foreground">${salePrice}</span>
               <span className="text-sm text-gray-400 line-through">${price}</span>
             </>
           ) : (

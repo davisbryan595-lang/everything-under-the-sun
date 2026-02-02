@@ -45,7 +45,7 @@ export function AdminLogin({ onLogin }: AdminLoginProps) {
 
           <button
             type="submit"
-            className="w-full bg-gold text-white py-2 font-semibold hover:text-white transition-colors btn-lift"
+            className="w-full bg-gold text-black py-2 font-semibold hover:text-black transition-colors btn-lift"
           >
             Login
           </button>

@@ -27,7 +27,7 @@ export default function CartPage() {
             <p className="text-gray-600 mb-8">Your cart is currently empty</p>
             <Link
               href="/shop"
-              className="inline-block bg-gold text-white px-8 py-3 font-semibold hover:text-white transition-colors btn-lift"
+              className="inline-block bg-gold text-black px-8 py-3 font-semibold hover:text-black transition-colors btn-lift"
             >
               Continue Shopping
             </Link>
@@ -114,7 +114,7 @@ export default function CartPage() {
                     <span>Shipping</span>
                     <span>
                       {shipping === 0 ? (
-                        <span className="text-gold font-semibold">Free</span>
+                        <span className="text-gold-foreground font-semibold">Free</span>
                       ) : (
                         `$${shipping.toFixed(2)}`
                       )}
@@ -136,7 +136,7 @@ export default function CartPage() {
 
                 <Link
                   href="/checkout"
-                  className="w-full bg-gold text-white py-3 font-semibold hover:text-white transition-colors block text-center mb-3 btn-lift inline-block"
+                  className="w-full bg-gold text-black py-3 font-semibold hover:text-black transition-colors block text-center mb-3 btn-lift inline-block"
                 >
                   Proceed to Checkout
                 </Link>

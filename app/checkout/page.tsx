@@ -37,7 +37,7 @@ export default function CheckoutPage() {
             <p className="text-gray-600 mb-8">Your cart is empty</p>
             <Link
               href="/shop"
-              className="inline-block bg-gold text-white px-8 py-3 font-semibold hover:text-white transition-colors btn-lift"
+              className="inline-block bg-gold text-black px-8 py-3 font-semibold hover:text-black transition-colors btn-lift"
             >
               Continue Shopping
             </Link>
@@ -183,7 +183,7 @@ export default function CheckoutPage() {
                     <span>Shipping</span>
                     <span>
                       {shipping === 0 ? (
-                        <span className="text-gold font-semibold">Free</span>
+                        <span className="text-gold-foreground font-semibold">Free</span>
                       ) : (
                         `$${shipping.toFixed(2)}`
                       )}

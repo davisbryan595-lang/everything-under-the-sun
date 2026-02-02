@@ -295,7 +295,7 @@ export default function ProductPage({ params }: { params: Promise<{ slug: string
               <div className="flex items-center gap-3 mb-6">
                 {product.sale ? (
                   <>
-                    <span className="text-3xl font-semibold text-gold">${product.salePrice}</span>
+                    <span className="text-3xl font-semibold text-gold-foreground">${product.salePrice}</span>
                     <span className="text-lg text-gray-400 line-through">${product.price}</span>
                     <span className="bg-gold text-black px-3 py-1 text-sm font-semibold">Sale</span>
                   </>
@@ -371,7 +371,7 @@ export default function ProductPage({ params }: { params: Promise<{ slug: string
               <div className="space-y-3 mb-6">
                 <button
                   onClick={handleAddToCart}
-                  className="w-full bg-gold text-white py-4 font-semibold hover:text-white transition-colors flex items-center justify-center gap-2 btn-lift"
+                  className="w-full bg-gold text-black py-4 font-semibold hover:text-black transition-colors flex items-center justify-center gap-2 btn-lift"
                 >
                   <ShoppingCart className="w-5 h-5" />
                   Add to Cart

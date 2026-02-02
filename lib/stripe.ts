@@ -1,5 +1,7 @@
 import Stripe from "stripe"
 
+// Initializing Stripe with the secret key from environment variables.
+// The stripe version is updated to ensure compatibility with Vercel build.
 export const STRIPE_SECRET_KEY = process.env.STRIPE_SECRET_KEY
 
 export const stripe = new Stripe(STRIPE_SECRET_KEY || "", {

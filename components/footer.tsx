@@ -8,10 +8,10 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6 md:gap-8">
           {/* Contact Info */}
           <div className="col-span-1">
-            <h3 className="font-serif text-lg md:text-xl mb-4 text-gold">Visit Us</h3>
+            <h3 className="font-serif text-lg md:text-xl mb-4 text-gold-foreground">Visit Us</h3>
             <div className="space-y-3 text-xs md:text-sm text-gray-700">
               <div className="flex items-start gap-2">
-                <MapPin className="w-5 h-5 text-gold mt-0.5 flex-shrink-0" />
+                <MapPin className="w-5 h-5 text-gold-foreground mt-0.5 flex-shrink-0" />
                 <p>
                   1911 West 170th Street
                   <br />
@@ -19,13 +19,13 @@ export function Footer() {
                 </p>
               </div>
               <div className="flex items-center gap-2">
-                <Phone className="w-5 h-5 text-gold" />
+                <Phone className="w-5 h-5 text-gold-foreground" />
                 <a href="tel:312-929-0496" className="hover:text-gold transition-colors">
                   312-929-0496
                 </a>
               </div>
               <div className="flex items-center gap-2">
-                <Mail className="w-5 h-5 text-gold" />
+                <Mail className="w-5 h-5 text-gold-foreground" />
                 <a href="mailto:hello@boutique.com" className="hover:text-gold transition-colors">
                   hello@boutique.com
                 </a>
@@ -35,7 +35,7 @@ export function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h3 className="font-serif text-lg md:text-xl mb-4 text-gold">Quick Links</h3>
+            <h3 className="font-serif text-lg md:text-xl mb-4 text-gold-foreground">Quick Links</h3>
             <ul className="space-y-2 text-xs md:text-sm text-gray-700">
               <li>
                 <Link href="/shop" className="hover:text-gold transition-colors">
@@ -62,7 +62,7 @@ export function Footer() {
 
           {/* Customer Service */}
           <div>
-            <h3 className="font-serif text-lg md:text-xl mb-4 text-gold">Customer Service</h3>
+            <h3 className="font-serif text-lg md:text-xl mb-4 text-gold-foreground">Customer Service</h3>
             <ul className="space-y-2 text-xs md:text-sm text-gray-700">
               <li>
                 <Link href="/shipping" className="hover:text-gold transition-colors">
@@ -89,7 +89,7 @@ export function Footer() {
 
           {/* Newsletter & Social */}
           <div>
-            <h3 className="font-serif text-lg md:text-xl mb-4 text-gold">Stay Connected</h3>
+            <h3 className="font-serif text-lg md:text-xl mb-4 text-gold-foreground">Stay Connected</h3>
             <form className="mb-4">
               <input
                 type="email"
@@ -98,7 +98,7 @@ export function Footer() {
               />
               <button
                 type="submit"
-                className="w-full bg-gold text-white font-medium py-2 hover:text-white transition-colors text-xs md:text-sm btn-lift"
+                className="w-full bg-gold text-black font-medium py-2 hover:text-black transition-colors text-xs md:text-sm btn-lift"
               >
                 Subscribe
               </button>
