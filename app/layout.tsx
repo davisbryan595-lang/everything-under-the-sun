@@ -19,6 +19,7 @@ const poppins = Poppins({
 })
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://everythingunderthesun.com"),
   title: "Everything Under the Sun Boutique | Luxury Women's Fashion",
   description:
     "Discover luxury women's fashion at Everything Under the Sun Boutique in Hazel Crest, IL. Premium dresses, shoes, purses & accessories.",
