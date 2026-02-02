@@ -8,7 +8,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6 md:gap-8">
           {/* Contact Info */}
           <div className="col-span-1">
-            <h3 className="font-serif text-lg md:text-xl mb-4 text-gold">Visit Us</h3>
+            <h3 className="font-serif text-lg md:text-xl mb-4 text-gold-foreground">Visit Us</h3>
             <div className="space-y-3 text-xs md:text-sm text-gray-700">
               <div className="flex items-start gap-2">
                 <MapPin className="w-5 h-5 text-gold mt-0.5 flex-shrink-0" />
@@ -35,7 +35,7 @@ export function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h3 className="font-serif text-lg md:text-xl mb-4 text-gold">Quick Links</h3>
+            <h3 className="font-serif text-lg md:text-xl mb-4 text-gold-foreground">Quick Links</h3>
             <ul className="space-y-2 text-xs md:text-sm text-gray-700">
               <li>
                 <Link href="/shop" className="hover:text-gold transition-colors">
@@ -62,7 +62,7 @@ export function Footer() {
 
           {/* Customer Service */}
           <div>
-            <h3 className="font-serif text-lg md:text-xl mb-4 text-gold">Customer Service</h3>
+            <h3 className="font-serif text-lg md:text-xl mb-4 text-gold-foreground">Customer Service</h3>
             <ul className="space-y-2 text-xs md:text-sm text-gray-700">
               <li>
                 <Link href="/shipping" className="hover:text-gold transition-colors">
@@ -89,7 +89,7 @@ export function Footer() {
 
           {/* Newsletter & Social */}
           <div>
-            <h3 className="font-serif text-lg md:text-xl mb-4 text-gold">Stay Connected</h3>
+            <h3 className="font-serif text-lg md:text-xl mb-4 text-gold-foreground">Stay Connected</h3>
             <form className="mb-4">
               <input
                 type="email"
