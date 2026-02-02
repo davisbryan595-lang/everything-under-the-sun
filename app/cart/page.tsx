@@ -53,18 +53,18 @@ export default function CartPage() {
             <div className="lg:col-span-2 space-y-4">
               {/* Free Shipping Progress */}
               {subtotal < freeShippingThreshold && (
-                <div className="bg-white border-2 border-gold p-4">
-                  <div className="flex justify-between text-sm mb-2">
-                    <span className="text-gray-700 font-medium">
+                <div className="bg-gradient-to-r from-white to-light-yellow border-2 border-gold p-5 shadow-sm">
+                  <div className="flex justify-between items-center text-sm mb-3">
+                    <span className="text-gray-800 font-semibold">
                       {progressToFreeShipping >= 100
                         ? "🎉 You've unlocked free shipping!"
-                        : `Add $${(freeShippingThreshold - subtotal).toFixed(2)} more for free shipping`}
+                        : `🚚 Add $${(freeShippingThreshold - subtotal).toFixed(2)} more for FREE shipping!`}
                     </span>
-                    <span className="text-gold font-semibold">${subtotal.toFixed(2)} / $100</span>
+                    <span className="text-gold font-bold text-base">${subtotal.toFixed(2)} / $100</span>
                   </div>
-                  <div className="w-full bg-gray-200 h-2 overflow-hidden">
+                  <div className="w-full bg-gray-200 h-3 overflow-hidden border border-gray-300">
                     <div
-                      className="bg-gold h-full transition-all duration-300"
+                      className="bg-gradient-to-r from-gold to-yellow-500 h-full transition-all duration-500 ease-out"
                       style={{ width: `${progressToFreeShipping}%` }}
                     />
                   </div>
