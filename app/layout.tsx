@@ -52,6 +52,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={`${poppins.variable} ${playfairDisplay.variable} font-sans antialiased bg-cream text-black`}>
         <script
+          key="no-dark-mode"
           dangerouslySetInnerHTML={{
             __html: `
               try {
