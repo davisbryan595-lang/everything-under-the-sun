@@ -16,6 +16,8 @@ export default function CartPage() {
   const shipping = subtotal >= 100 ? 0 : 10
   const tax = Math.round(subtotal * 0.08 * 100) / 100
   const total = subtotal + shipping + tax
+  const freeShippingThreshold = 100
+  const progressToFreeShipping = Math.min((subtotal / freeShippingThreshold) * 100, 100)
 
   if (cart.length === 0) {
     return (
