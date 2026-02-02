@@ -10,7 +10,7 @@ if (!STRIPE_PUBLIC_KEY) {
 
 // Stripe client for server-side
 export const stripe = new Stripe(STRIPE_SECRET_KEY || "", {
-  apiVersion: "2025-01-27-acacia" as any, // Using a recent stable version
+  apiVersion: "2024-06-20" as any,
 })
 
 // Stripe loader for client-side
