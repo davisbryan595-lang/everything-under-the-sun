@@ -11,7 +11,7 @@ export function Footer() {
             <h3 className="font-serif text-lg md:text-xl mb-4 text-gold-foreground">Visit Us</h3>
             <div className="space-y-3 text-xs md:text-sm text-gray-700">
               <div className="flex items-start gap-2">
-                <MapPin className="w-5 h-5 text-gold mt-0.5 flex-shrink-0" />
+                <MapPin className="w-5 h-5 text-gold-foreground mt-0.5 flex-shrink-0" />
                 <p>
                   1911 West 170th Street
                   <br />
@@ -19,13 +19,13 @@ export function Footer() {
                 </p>
               </div>
               <div className="flex items-center gap-2">
-                <Phone className="w-5 h-5 text-gold" />
+                <Phone className="w-5 h-5 text-gold-foreground" />
                 <a href="tel:312-929-0496" className="hover:text-gold transition-colors">
                   312-929-0496
                 </a>
               </div>
               <div className="flex items-center gap-2">
-                <Mail className="w-5 h-5 text-gold" />
+                <Mail className="w-5 h-5 text-gold-foreground" />
                 <a href="mailto:hello@boutique.com" className="hover:text-gold transition-colors">
                   hello@boutique.com
                 </a>
