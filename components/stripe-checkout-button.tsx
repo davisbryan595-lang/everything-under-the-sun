@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { getStripe } from "@/lib/stripe-utils"
+import { getStripe } from "@/lib/stripe-client"
 
 interface StripeCheckoutButtonProps {
   total: number
