@@ -4,16 +4,7 @@ import { useState } from 'react'
 import Image from 'next/image'
 import { X, Heart, ShoppingCart } from 'lucide-react'
 import { useStore } from '@/lib/store'
-
-interface Product {
-  id: string
-  name: string
-  price: number
-  salePrice?: number
-  image: string
-  description: string
-  category: string
-}
+import { type Product } from '@/data/products'
 
 interface ProductDetailPanelProps {
   product: Product | null

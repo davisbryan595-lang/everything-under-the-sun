@@ -17,6 +17,10 @@ const nextConfig = {
         protocol: 'https',
         hostname: '**.v0.app',
       },
+      {
+        protocol: 'https',
+        hostname: 'cdn.builder.io',
+      },
     ],
     unoptimized: true,
   },

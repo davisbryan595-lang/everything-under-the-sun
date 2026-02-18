@@ -5,75 +5,15 @@ import { HeroCarousel } from "@/components/hero-carousel"
 import { AnimatedCounters } from "@/components/animated-counters"
 import { ProductCard } from "@/components/product-card"
 import { Shirt, Footprints, ShoppingBag, Sparkles } from "lucide-react"
+import { allProducts } from "@/data/products"
 
-const newArrivals = [
-  {
-    id: "1",
-    name: "Elegant Evening Dress",
-    price: 89,
-    image: "/shop/IMG-20251114-WA0003.jpg",
-    slug: "elegant-evening-dress",
-  },
-  {
-    id: "2",
-    name: "Casual Linen Dress",
-    price: 65,
-    image: "/shop/IMG-20251114-WA0004.jpg",
-    slug: "casual-linen-dress",
-    sale: true,
-    salePrice: 49,
-  },
-  {
-    id: "3",
-    name: "Vintage Floral Blouse",
-    price: 55,
-    image: "/shop/IMG-20251114-WA0005.jpg",
-    slug: "vintage-floral-blouse",
-  },
-  {
-    id: "4",
-    name: "Premium Wool Coat",
-    price: 145,
-    image: "/shop/IMG-20251114-WA0006.jpg",
-    slug: "premium-wool-coat",
-  },
-  {
-    id: "5",
-    name: "Tailored Blazer",
-    price: 98,
-    image: "/shop/IMG-20251114-WA0007.jpg",
-    slug: "tailored-blazer",
-  },
-  {
-    id: "6",
-    name: "Silk Slip Dress",
-    price: 79,
-    image: "/shop/IMG-20251114-WA0008.jpg",
-    slug: "silk-slip-dress",
-  },
-  {
-    id: "7",
-    name: "Structured Pencil Skirt",
-    price: 68,
-    image: "/shop/IMG-20251114-WA0009.jpg",
-    slug: "structured-pencil-skirt",
-  },
-  {
-    id: "8",
-    name: "Bohemian Wrap Top",
-    price: 72,
-    image: "/shop/IMG-20251114-WA0010.jpg",
-    slug: "bohemian-wrap-top",
-    sale: true,
-    salePrice: 54,
-  },
-]
+const newArrivals = allProducts.slice(0, 8)
 
 const categories = [
-  { name: "Clothing", href: "/shop?category=dresses", icon: Shirt },
-  { name: "Footwear", href: "/shop?category=shoes", icon: Footprints },
-  { name: "Bags & Purses", href: "/shop?category=purses", icon: ShoppingBag },
-  { name: "Accessories & More", href: "/shop?category=accessories", icon: Sparkles },
+  { name: "Accessories", href: "/shop?category=Accessories", icon: Sparkles },
+  { name: "Beauty", href: "/shop?category=Beauty", icon: Shirt },
+  { name: "Jewelry", href: "/shop?category=Jewelry", icon: Sparkles },
+  { name: "Purses", href: "/shop?category=Purses", icon: ShoppingBag },
 ]
 
 export default function Home() {
@@ -152,56 +92,74 @@ export default function Home() {
             <div className="w-24 h-1 bg-gold mx-auto"></div>
           </div>
 
-          {/* Clothing Category */}
+          {/* Accessories Category */}
           <div className="mb-16">
-            <h3 className="font-serif text-2xl md:text-3xl text-black mb-6">Clothing</h3>
+            <h3 className="font-serif text-2xl md:text-3xl text-black mb-6">Accessories</h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
-              <div key="clothing-0"><ProductCard {...newArrivals[0]} /></div>
-              <div key="clothing-1"><ProductCard {...newArrivals[1]} /></div>
-              <div key="clothing-5"><ProductCard {...newArrivals[5]} /></div>
+              {allProducts.filter(p => p.category === "Accessories").slice(0, 3).map(p => (
+                <div key={p.id}><ProductCard {...p} /></div>
+              ))}
             </div>
             <div className="text-center">
               <Link
-                href="/shop?category=dresses"
+                href="/shop?category=Accessories"
                 className="inline-block bg-black text-white px-6 py-2 font-semibold hover:text-white transition-colors border-2 border-gold text-sm btn-lift"
               >
-                View All Clothing
+                View All Accessories
               </Link>
             </div>
           </div>
 
-          {/* Bags & Accessories Category */}
+          {/* Jewelry Category */}
           <div className="mb-16">
-            <h3 className="font-serif text-2xl md:text-3xl text-black mb-6">Bags & Accessories</h3>
+            <h3 className="font-serif text-2xl md:text-3xl text-black mb-6">Jewelry</h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
-              <div key="bags-2"><ProductCard {...newArrivals[2]} /></div>
-              <div key="bags-6"><ProductCard {...newArrivals[6]} /></div>
-              <div key="bags-7"><ProductCard {...newArrivals[7]} /></div>
+              {allProducts.filter(p => p.category === "Jewelry").slice(0, 3).map(p => (
+                <div key={p.id}><ProductCard {...p} /></div>
+              ))}
             </div>
             <div className="text-center">
               <Link
-                href="/shop?category=purses"
+                href="/shop?category=Jewelry"
                 className="inline-block bg-black text-white px-6 py-2 font-semibold hover:text-white transition-colors border-2 border-gold text-sm btn-lift"
               >
-                View All Bags & Accessories
+                View All Jewelry
               </Link>
             </div>
           </div>
 
-          {/* Footwear Category */}
+          {/* Purses Category */}
+          <div className="mb-16">
+            <h3 className="font-serif text-2xl md:text-3xl text-black mb-6">Purses</h3>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+              {allProducts.filter(p => p.category === "Purses").slice(0, 3).map(p => (
+                <div key={p.id}><ProductCard {...p} /></div>
+              ))}
+            </div>
+            <div className="text-center">
+              <Link
+                href="/shop?category=Purses"
+                className="inline-block bg-black text-white px-6 py-2 font-semibold hover:text-white transition-colors border-2 border-gold text-sm btn-lift"
+              >
+                View All Purses
+              </Link>
+            </div>
+          </div>
+
+          {/* Home Decor Category */}
           <div>
-            <h3 className="font-serif text-2xl md:text-3xl text-black mb-6">Footwear</h3>
+            <h3 className="font-serif text-2xl md:text-3xl text-black mb-6">Home Decor</h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
-              <div key="footwear-3"><ProductCard {...newArrivals[3]} /></div>
-              <div key="footwear-4"><ProductCard {...newArrivals[4]} /></div>
-              <div key="footwear-0"><ProductCard {...newArrivals[0]} /></div>
+              {allProducts.filter(p => p.category === "Home").slice(0, 3).map(p => (
+                <div key={p.id}><ProductCard {...p} /></div>
+              ))}
             </div>
             <div className="text-center">
               <Link
-                href="/shop?category=shoes"
+                href="/shop?category=Home"
                 className="inline-block bg-black text-white px-6 py-2 font-semibold hover:text-white transition-colors border-2 border-gold text-sm btn-lift"
               >
-                View All Footwear
+                View All Home Decor
               </Link>
             </div>
           </div>

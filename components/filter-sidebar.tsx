@@ -15,9 +15,9 @@ export interface FilterState {
   sort: string
 }
 
-const sizes = ["XS", "S", "M", "L", "XL", "2X", "3X"]
-const colors = ["Black", "White", "Gold", "Red", "Blue", "Nude", "Blush"]
-const categories = ["Dresses", "Shoes", "Purses", "Accessories"]
+const sizes = ["One Size", "Small", "Large", "Set of 2", "Set of 36"]
+const colors = ["Gold", "Silver", "Multi", "Black", "Red", "Blue", "Green", "Beige", "Pink"]
+const categories = ["Accessories", "Beauty", "Jewelry", "Purses", "Home"]
 
 export function FilterSidebar({ onFiltersChange }: FilterSidebarProps) {
   const [filters, setFilters] = useState<FilterState>({
