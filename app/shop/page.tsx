@@ -1,190 +1,33 @@
 "use client"
 
-import { useState, useMemo } from "react"
+import { useState, useMemo, useEffect, Suspense } from "react"
+import { useSearchParams } from "next/navigation"
 import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
 import { ProductCard } from "@/components/product-card"
 import { FilterSidebar, type FilterState } from "@/components/filter-sidebar"
+import { allProducts } from "@/data/products"
 
-const allProducts = [
-  // Clothing - Dresses & Tops
-  {
-    id: "1",
-    name: "Elegant Evening Dress",
-    category: "Dresses",
-    price: 89,
-    image: "/shop/IMG-20251114-WA0003.jpg",
-    slug: "elegant-evening-dress",
-    sizes: ["XS", "S", "M", "L", "XL"],
-    colors: ["Black", "Navy"],
-  },
-  {
-    id: "2",
-    name: "Casual Linen Dress",
-    category: "Dresses",
-    price: 65,
-    salePrice: 49,
-    sale: true,
-    image: "/shop/IMG-20251114-WA0004.jpg",
-    slug: "casual-linen-dress",
-    sizes: ["S", "M", "L", "XL"],
-    colors: ["Beige", "White"],
-  },
-  {
-    id: "3",
-    name: "Vintage Floral Blouse",
-    category: "Dresses",
-    price: 55,
-    image: "/shop/IMG-20251114-WA0005.jpg",
-    slug: "vintage-floral-blouse",
-    sizes: ["XS", "S", "M", "L"],
-    colors: ["Multi", "Pink"],
-  },
-  {
-    id: "4",
-    name: "Premium Wool Coat",
-    category: "Outerwear",
-    price: 145,
-    image: "/shop/IMG-20251114-WA0006.jpg",
-    slug: "premium-wool-coat",
-    sizes: ["XS", "S", "M", "L", "XL"],
-    colors: ["Camel", "Black", "Gray"],
-  },
-  {
-    id: "5",
-    name: "Tailored Blazer",
-    category: "Dresses",
-    price: 98,
-    image: "/shop/IMG-20251114-WA0007.jpg",
-    slug: "tailored-blazer",
-    sizes: ["XS", "S", "M", "L", "XL"],
-    colors: ["Black", "Navy", "White"],
-  },
-  {
-    id: "6",
-    name: "Silk Slip Dress",
-    category: "Dresses",
-    price: 79,
-    image: "/shop/IMG-20251114-WA0008.jpg",
-    slug: "silk-slip-dress",
-    sizes: ["S", "M", "L", "XL"],
-    colors: ["Black", "Champagne", "Burgundy"],
-  },
-  {
-    id: "7",
-    name: "Structured Pencil Skirt",
-    category: "Dresses",
-    price: 68,
-    image: "/shop/IMG-20251114-WA0009.jpg",
-    slug: "structured-pencil-skirt",
-    sizes: ["XS", "S", "M", "L"],
-    colors: ["Black", "Navy", "Charcoal"],
-  },
-  {
-    id: "8",
-    name: "Bohemian Wrap Top",
-    category: "Dresses",
-    price: 72,
-    salePrice: 54,
-    sale: true,
-    image: "/shop/IMG-20251114-WA0010.jpg",
-    slug: "bohemian-wrap-top",
-    sizes: ["S", "M", "L", "XL"],
-    colors: ["Multi", "Earth Tones"],
-  },
-  {
-    id: "9",
-    name: "Statement Sleeve Blouse",
-    category: "Dresses",
-    price: 76,
-    image: "/shop/IMG-20251114-WA0011.jpg",
-    slug: "statement-sleeve-blouse",
-    sizes: ["XS", "S", "M", "L"],
-    colors: ["White", "Black", "Blush"],
-  },
-  // Bags & Purses
-  {
-    id: "10",
-    name: "Luxury Handbag",
-    category: "Purses",
-    price: 165,
-    image: "/shop/IMG-20251114-WA0012.jpg",
-    slug: "luxury-handbag",
-    sizes: ["M"],
-    colors: ["Black", "Cognac", "Burgundy"],
-  },
-  {
-    id: "11",
-    name: "Woven Crossbody Bag",
-    category: "Purses",
-    price: 58,
-    image: "/shop/IMG-20251114-WA0013.jpg",
-    slug: "woven-crossbody-bag",
-    sizes: ["S", "M"],
-    colors: ["Natural", "Tan", "Black"],
-  },
-  {
-    id: "12",
-    name: "Suede Shoulder Tote",
-    category: "Purses",
-    price: 92,
-    image: "/shop/IMG-20251114-WA0014.jpg",
-    slug: "suede-shoulder-tote",
-    sizes: ["M", "L"],
-    colors: ["Black", "Camel", "Taupe"],
-  },
-  // Footwear
-  {
-    id: "13",
-    name: "Metallic Accent Heels",
-    category: "Shoes",
-    price: 85,
-    image: "/shop/IMG-20251114-WA0015.jpg",
-    slug: "metallic-accent-heels",
-    sizes: ["S", "M", "L"],
-    colors: ["Gold", "Silver", "Rose Gold"],
-  },
-  {
-    id: "14",
-    name: "Classic Leather Loafers",
-    category: "Shoes",
-    price: 95,
-    image: "/shop/IMG-20251114-WA0016.jpg",
-    slug: "classic-leather-loafers",
-    sizes: ["S", "M", "L", "XL"],
-    colors: ["Black", "Tan", "Burgundy"],
-  },
-  // More Clothing
-  {
-    id: "15",
-    name: "Embroidered Evening Top",
-    category: "Dresses",
-    price: 81,
-    image: "/shop/IMG-20251114-WA0017.jpg",
-    slug: "embroidered-evening-top",
-    sizes: ["XS", "S", "M", "L"],
-    colors: ["Black", "Navy", "Emerald"],
-  },
-  {
-    id: "16",
-    name: "Designer Midi Dress",
-    category: "Dresses",
-    price: 124,
-    image: "/shop/IMG-20251114-WA0018.jpg",
-    slug: "designer-midi-dress",
-    sizes: ["S", "M", "L", "XL"],
-    colors: ["Black", "Cream", "Navy"],
-  },
-]
+function ShopContent() {
+  const searchParams = useSearchParams()
+  const initialCategory = searchParams.get("category")
+  const isSale = searchParams.get("sale") === "true"
 
-export default function ShopPage() {
   const [filters, setFilters] = useState<FilterState>({
-    category: [],
+    category: initialCategory ? [initialCategory] : [],
     sizes: [],
     colors: [],
     priceRange: [0, 1000],
     sort: "newest",
   })
+
+  // Update filters when search params change
+  useEffect(() => {
+    const category = searchParams.get("category")
+    if (category) {
+      setFilters(prev => ({ ...prev, category: [category] }))
+    }
+  }, [searchParams])
 
   const filteredProducts = useMemo(() => {
     let result = [...allProducts]
@@ -194,6 +37,11 @@ export default function ShopPage() {
       result = result.filter((p) => filters.category.includes(p.category))
     }
 
+    // Apply sale filter if from URL
+    if (isSale) {
+      result = result.filter((p) => p.salePrice || p.sale)
+    }
+
     // Apply size filter
     if (filters.sizes.length > 0) {
       result = result.filter((p) => filters.sizes.some((size) => p.sizes.includes(size)))
@@ -201,7 +49,7 @@ export default function ShopPage() {
 
     // Apply color filter
     if (filters.colors.length > 0) {
-      result = result.filter((p) => filters.colors.some((color) => p.colors.includes(color)))
+      result = result.filter((p) => filters.colors.some((color) => p.colors.some(c => c.name === color)))
     }
 
     // Apply price filter
@@ -226,7 +74,7 @@ export default function ShopPage() {
     }
 
     return result
-  }, [filters])
+  }, [filters, isSale])
 
   return (
     <>
@@ -283,5 +131,13 @@ export default function ShopPage() {
 
       <Footer />
     </>
+  )
+}
+
+export default function ShopPage() {
+  return (
+    <Suspense fallback={<div className="min-h-screen bg-light-yellow flex items-center justify-center font-serif text-2xl">Loading Shop...</div>}>
+      <ShopContent />
+    </Suspense>
   )
 }
